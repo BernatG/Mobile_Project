@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 80a0a07945c4d1846addd79d4a3b0118
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Score Board
+  fontNames:
+  - Score Board
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1c5fafd37002cce4e81f1ef726a63d97, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
