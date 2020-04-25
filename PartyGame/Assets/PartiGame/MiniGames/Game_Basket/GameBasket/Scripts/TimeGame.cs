@@ -32,7 +32,7 @@ public class TimeGame : MonoBehaviour
         textStartGame.text = time.ToString();
         startGameGo.SetActive(true);
 
-        initalGame.SetActive(false);
+
 
         CanvasRankingGame.SetActive(false);
         //timeGameGo.SetActive(false);        
