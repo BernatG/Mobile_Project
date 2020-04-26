@@ -1,0 +1,1107 @@
+fileFormatVersion: 2
+guid: 45d3edfc91d1ff64e8c0138c500a923d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: group
+    100004: Group005
+    100006: head
+    100008: ikHandle5
+    100010: ikHandle6
+    100012: joint1
+    100014: joint10
+    100016: joint11
+    100018: joint11 1
+    100020: joint12
+    100022: joint12 1
+    100024: joint13
+    100026: joint13 1
+    100028: joint14
+    100030: joint15
+    100032: joint15 1
+    100034: joint16
+    100036: joint16 1
+    100038: joint17
+    100040: joint17 1
+    100042: joint19
+    100044: joint2
+    100046: joint2 1
+    100048: joint20
+    100050: joint20 1
+    100052: joint21
+    100054: joint21 1
+    100056: joint25
+    100058: joint3
+    100060: joint3 1
+    100062: joint30
+    100064: joint35
+    100066: joint4
+    100068: joint4 1
+    100070: joint40
+    100072: joint45
+    100074: joint46
+    100076: joint47
+    100078: joint47 1
+    100080: joint48
+    100082: joint48 1
+    100084: joint49
+    100086: joint49 1
+    100088: joint5
+    100090: joint50
+    100092: joint50 1
+    100094: joint56
+    100096: joint6
+    100098: joint6 1
+    100100: joint7
+    100102: joint7 1
+    100104: joint8
+    100106: joint8 1
+    100108: nurbsCircle1
+    100110: nurbsCircle10
+    100112: nurbsCircle2
+    100114: nurbsCircle5
+    100116: nurbsCircle7
+    100118: nurbsCircle8
+    100120: nurbsCircle9
+    100122: Object023
+    100124: Object024
+    100126: pasted__nurbsCircle10
+    100128: pasted__nurbsCircle10 1
+    100130: pasted__nurbsCircle2
+    100132: pasted__nurbsCircle4
+    100134: pasted__nurbsCircle7
+    100136: pasted__pasted__nurbsCircle10
+    100138: pasted__pasted__nurbsCircle10 1
+    100140: pasted__pasted__pasted__nurbsCircle10
+    100142: pelo
+    100144: QuickRigCharacter_Head
+    100146: QuickRigCharacter_Hips
+    100148: QuickRigCharacter_LeftArm
+    100150: QuickRigCharacter_LeftForeArm
+    100152: QuickRigCharacter_LeftHand
+    100154: QuickRigCharacter_LeftShoulder
+    100156: QuickRigCharacter_Neck
+    100158: QuickRigCharacter_RightArm
+    100160: QuickRigCharacter_RightForeArm
+    100162: QuickRigCharacter_RightHand
+    100164: QuickRigCharacter_RightShoulder
+    100166: QuickRigCharacter_Spine
+    100168: QuickRigCharacter_Spine1
+    100170: QuickRigCharacter_Spine2
+    400000: //RootNode
+    400002: group
+    400004: Group005
+    400006: head
+    400008: ikHandle5
+    400010: ikHandle6
+    400012: joint1
+    400014: joint10
+    400016: joint11
+    400018: joint11 1
+    400020: joint12
+    400022: joint12 1
+    400024: joint13
+    400026: joint13 1
+    400028: joint14
+    400030: joint15
+    400032: joint15 1
+    400034: joint16
+    400036: joint16 1
+    400038: joint17
+    400040: joint17 1
+    400042: joint19
+    400044: joint2
+    400046: joint2 1
+    400048: joint20
+    400050: joint20 1
+    400052: joint21
+    400054: joint21 1
+    400056: joint25
+    400058: joint3
+    400060: joint3 1
+    400062: joint30
+    400064: joint35
+    400066: joint4
+    400068: joint4 1
+    400070: joint40
+    400072: joint45
+    400074: joint46
+    400076: joint47
+    400078: joint47 1
+    400080: joint48
+    400082: joint48 1
+    400084: joint49
+    400086: joint49 1
+    400088: joint5
+    400090: joint50
+    400092: joint50 1
+    400094: joint56
+    400096: joint6
+    400098: joint6 1
+    400100: joint7
+    400102: joint7 1
+    400104: joint8
+    400106: joint8 1
+    400108: nurbsCircle1
+    400110: nurbsCircle10
+    400112: nurbsCircle2
+    400114: nurbsCircle5
+    400116: nurbsCircle7
+    400118: nurbsCircle8
+    400120: nurbsCircle9
+    400122: Object023
+    400124: Object024
+    400126: pasted__nurbsCircle10
+    400128: pasted__nurbsCircle10 1
+    400130: pasted__nurbsCircle2
+    400132: pasted__nurbsCircle4
+    400134: pasted__nurbsCircle7
+    400136: pasted__pasted__nurbsCircle10
+    400138: pasted__pasted__nurbsCircle10 1
+    400140: pasted__pasted__pasted__nurbsCircle10
+    400142: pelo
+    400144: QuickRigCharacter_Head
+    400146: QuickRigCharacter_Hips
+    400148: QuickRigCharacter_LeftArm
+    400150: QuickRigCharacter_LeftForeArm
+    400152: QuickRigCharacter_LeftHand
+    400154: QuickRigCharacter_LeftShoulder
+    400156: QuickRigCharacter_Neck
+    400158: QuickRigCharacter_RightArm
+    400160: QuickRigCharacter_RightForeArm
+    400162: QuickRigCharacter_RightHand
+    400164: QuickRigCharacter_RightShoulder
+    400166: QuickRigCharacter_Spine
+    400168: QuickRigCharacter_Spine1
+    400170: QuickRigCharacter_Spine2
+    2100000: 08 - Default2
+    2100002: 21 - Default1
+    2100004: 07 - Default1
+    2100006: 14 - Default2
+    2100008: 09 - Default2
+    2100010: 13 - Default2
+    2100012: 19 - Default2
+    2100014: Material.002
+    4300000: Object024
+    4300002: Object023
+    4300004: head
+    4300006: pelo
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: head
+    13700002: Object023
+    13700004: Object024
+    13700006: pelo
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 297
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: QuickRigCharacter_Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint46
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint56
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint47
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint47 1
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint48
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint48 1
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint50
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint50 1
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint5
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint6
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint7
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint10
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint11
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint12
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint14
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint15
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint16
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint30
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint2 1
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint3 1
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint35
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint6 1
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint7 1
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint40
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint11 1
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint12 1
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint45
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint15 1
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: joint16 1
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: AnimacionesMoza(1)(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group005
+      parentName: AnimacionesMoza(1)(Clone)
+      position: {x: -0, y: 0.5455861, z: 0.0000000047683715}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object024
+      parentName: Group005
+      position: {x: -0.0027746772, y: -0.04621836, z: -0.5447397}
+      rotation: {x: 0.00000047683716, y: 0, z: -0, w: 1}
+      scale: {x: 20.142103, y: 22.462076, z: 20.142103}
+    - name: Object023
+      parentName: Group005
+      position: {x: -0.0049377633, y: -0.04611216, z: -0.5447397}
+      rotation: {x: 0.00000047683716, y: 0, z: -0, w: 1}
+      scale: {x: 20.717741, y: 20.142103, z: 20.142103}
+    - name: head
+      parentName: Group005
+      position: {x: -0.0049377633, y: -0.04611216, z: -0.5447397}
+      rotation: {x: 0.00000047683716, y: 0, z: -0, w: 1}
+      scale: {x: 20.717741, y: 20.142103, z: 20.142103}
+    - name: pelo
+      parentName: Group005
+      position: {x: -0.002187519, y: -0.00095609186, z: 0.39048797}
+      rotation: {x: -0.0150903445, y: 0.027551632, z: -0.020690968, w: 0.9992923}
+      scale: {x: 20.699793, y: 19.362362, z: 20.181353}
+    - name: nurbsCircle1
+      parentName: AnimacionesMoza(1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__nurbsCircle4
+      parentName: nurbsCircle1
+      position: {x: -0.00000022888183, y: 0.49713802, z: 0.045807045}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nurbsCircle7
+      parentName: pasted__nurbsCircle4
+      position: {x: -0, y: 0.06396244, z: 0.01483314}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nurbsCircle8
+      parentName: nurbsCircle7
+      position: {x: -0, y: 0.063639484, z: 0.007215056}
+      rotation: {x: 0.18985887, y: -0, z: -0, w: 0.9818114}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__nurbsCircle10
+      parentName: nurbsCircle8
+      position: {x: -0.092952885, y: 0.12590389, z: -0.03853528}
+      rotation: {x: -0.0056639924, y: 0.00035994643, z: 0.063420996, w: 0.99797076}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__nurbsCircle10
+      parentName: pasted__pasted__nurbsCircle10
+      position: {x: -0.06737485, y: -0.13534245, z: -0.023774438}
+      rotation: {x: -0.25192794, y: 0.027700948, z: 0.10572851, w: 0.9615542}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nurbsCircle10
+      parentName: pasted__nurbsCircle10
+      position: {x: -0.07207691, y: -0.12302707, z: 0.0135082025}
+      rotation: {x: -0.05894174, y: 0.2145334, z: 0.2582869, w: 0.9401006}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nurbsCircle9
+      parentName: nurbsCircle8
+      position: {x: -3.3881317e-23, y: 0.20564204, z: -0.044444922}
+      rotation: {x: -0.17966859, y: -0.00970106, z: -0.0017718971, w: 0.98367774}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__pasted__nurbsCircle10
+      parentName: nurbsCircle8
+      position: {x: 0.09495093, y: 0.12590389, z: -0.03853528}
+      rotation: {x: 0, y: -0, z: -0.06659412, w: 0.99778014}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__pasted__nurbsCircle10 1
+      parentName: pasted__pasted__pasted__nurbsCircle10
+      position: {x: 0.062316548, y: -0.12958434, z: -0.018420858}
+      rotation: {x: -0.2527364, y: -0.018956298, z: -0.072352074, w: 0.96463996}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__nurbsCircle10 1
+      parentName: pasted__pasted__nurbsCircle10 1
+      position: {x: 0.07659426, y: -0.1280138, z: 0.007298852}
+      rotation: {x: -0.11720978, y: 0.029314319, z: -0.24085073, w: 0.9630127}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__nurbsCircle2
+      parentName: nurbsCircle1
+      position: {x: -0.06411709, y: 0.039629236, z: -0.01168136}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ikHandle5
+      parentName: pasted__nurbsCircle2
+      position: {x: 0.00032560824, y: -0.0009818673, z: -0.003840804}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pasted__nurbsCircle7
+      parentName: pasted__nurbsCircle2
+      position: {x: -0.0072237155, y: 0.25008923, z: 0.072930984}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nurbsCircle2
+      parentName: nurbsCircle1
+      position: {x: 0.07845613, y: 0.04405923, z: -0.011679577}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ikHandle6
+      parentName: nurbsCircle2
+      position: {x: 0.0008990097, y: -0.0009818649, z: -0.0038426232}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nurbsCircle5
+      parentName: nurbsCircle2
+      position: {x: 0.008448309, y: 0.25008953, z: 0.07292917}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: group
+      parentName: AnimacionesMoza(1)(Clone)
+      position: {x: -0.16032797, y: 0.6153014, z: 0.016827598}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: QuickRigCharacter_Hips
+      parentName: AnimacionesMoza(1)(Clone)
+      position: {x: -0.00000022888183, y: 0.49713802, z: 0.045807045}
+      rotation: {x: 0.5010414, y: -0.4989564, z: -0.5010414, w: 0.4989564}
+      scale: {x: 1.000001, y: 1.000001, z: 1.0000005}
+    - name: joint56
+      parentName: QuickRigCharacter_Hips
+      position: {x: 0.036217935, y: -0.005422824, z: -0.053245142}
+      rotation: {x: -0.016457262, y: 0.7044523, z: -0.708869, w: -0.031321555}
+      scale: {x: 1.0000018, y: 1.0000018, z: 1.0000029}
+    - name: joint47 1
+      parentName: joint56
+      position: {x: -0.17688042, y: -0.0105808135, z: -0.0274769}
+      rotation: {x: 0.00049540546, y: -0.008342882, z: 0.008296276, w: 0.99993074}
+      scale: {x: 1.0000006, y: 0.9999995, z: 0.99999976}
+    - name: joint48 1
+      parentName: joint47 1
+      position: {x: -0.2503894, y: -0.01997458, z: 0.076771796}
+      rotation: {x: -0.0032646265, y: -0.004296203, z: 0.00075967103, w: 0.9999852}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000008}
+    - name: joint49 1
+      parentName: joint48 1
+      position: {x: -0.014246096, y: -0.000706418, z: -0.0612497}
+      rotation: {x: -0.6893744, y: -0.72440535, z: 0.0000000630971, w: -0.000000028405335}
+      scale: {x: 1, y: 0.99999976, z: 0.99999964}
+    - name: joint50 1
+      parentName: joint49 1
+      position: {x: 0.0000725, y: -0.0030472998, z: 0.06458049}
+      rotation: {x: -0.000000089406946, y: -0.7071068, z: 0.00000005960463, w: 0.7071068}
+      scale: {x: 1.0000013, y: 1, z: 1.0000012}
+    - name: joint46
+      parentName: QuickRigCharacter_Hips
+      position: {x: 0.03621814, y: -0.0054228255, z: 0.05722753}
+      rotation: {x: -0.016653126, y: 0.70998555, z: -0.703331, w: -0.031124681}
+      scale: {x: 1.0000007, y: 1.0000007, z: 1.0000011}
+    - name: joint47
+      parentName: joint46
+      position: {x: -0.17658226, y: -0.014979633, z: -0.027476925}
+      rotation: {x: 0.00048002496, y: -0.008328937, z: 0.009841037, w: 0.9999168}
+      scale: {x: 1.0000014, y: 1.000001, z: 1.000002}
+    - name: joint48
+      parentName: joint47
+      position: {x: -0.2511369, y: -0.004894467, z: 0.07677179}
+      rotation: {x: 0.0045542167, y: -0.0039113523, z: -0.0008675405, w: 0.9999816}
+      scale: {x: 1.0000011, y: 1.000001, z: 1.0000018}
+    - name: joint49
+      parentName: joint48
+      position: {x: -0.014246107, y: -0.00070641853, z: -0.06124962}
+      rotation: {x: -0.6893743, y: -0.7244053, z: 0.000000051455572, w: 0.000000007450581}
+      scale: {x: 0.99999976, y: 0.9999997, z: 0.9999995}
+    - name: joint50
+      parentName: joint49
+      position: {x: -0.0000724621, y: -0.0030473184, z: 0.0645801}
+      rotation: {x: -0.000000119209275, y: -0.7071068, z: 0.000000029802319, w: 0.70710677}
+      scale: {x: 1.0000006, y: 1.0000002, z: 1.0000004}
+    - name: QuickRigCharacter_Spine
+      parentName: QuickRigCharacter_Hips
+      position: {x: -0.06402376, y: 0.014566283, z: 8.231297e-18}
+      rotation: {x: -0, y: -0, z: 0.02429691, w: 0.99970484}
+      scale: {x: 1.0000007, y: 1.0000007, z: 1.0000011}
+    - name: QuickRigCharacter_Spine1
+      parentName: QuickRigCharacter_Spine
+      position: {x: -0.06325622, y: 0.010034406, z: -5.911375e-18}
+      rotation: {x: -0, y: -0, z: -0.000000029802319, w: 1}
+      scale: {x: 1.0000006, y: 1.0000006, z: 1.0000012}
+    - name: QuickRigCharacter_Spine2
+      parentName: QuickRigCharacter_Spine1
+      position: {x: -0.07312213, y: -0.015101622, z: -1.1130725e-17}
+      rotation: {x: -0.000000030517626, y: -0.00000002906942, z: 0.07108032, w: -0.9974706}
+      scale: {x: 1.000002, y: 1.0000024, z: 1.0000014}
+    - name: QuickRigCharacter_LeftShoulder
+      parentName: QuickRigCharacter_Spine2
+      position: {x: -0.051295076, y: -0.025333451, z: 0.092952885}
+      rotation: {x: 0.7029719, y: -0.25910687, z: -0.26047367, w: -0.60897267}
+      scale: {x: 0.99999994, y: 0.9999995, z: 0.9999996}
+    - name: QuickRigCharacter_LeftArm
+      parentName: QuickRigCharacter_LeftShoulder
+      position: {x: -0.06737484, y: -0.13534246, z: -0.02377444}
+      rotation: {x: 0.75139236, y: -0.09776556, z: -0.02598075, w: 0.65205556}
+      scale: {x: 0.99999994, y: 1.0000014, z: 1.0000014}
+    - name: QuickRigCharacter_LeftForeArm
+      parentName: QuickRigCharacter_LeftArm
+      position: {x: -0.07207691, y: 0.0135082025, z: 0.12302709}
+      rotation: {x: -0.000000119209275, y: 3.5527133e-15, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000007}
+    - name: QuickRigCharacter_LeftHand
+      parentName: QuickRigCharacter_LeftForeArm
+      position: {x: -0.017241133, y: 0.0016224334, z: 0.026325097}
+      rotation: {x: 0.00037582743, y: 0.3934812, z: -0.0027760393, w: 0.91932845}
+      scale: {x: 1.0000007, y: 1.0000012, z: 1.000001}
+    - name: joint19
+      parentName: QuickRigCharacter_LeftHand
+      position: {x: 0.0044643283, y: 0.02957102, z: 0.011977847}
+      rotation: {x: -0.70027214, y: 0.09807651, z: -0.09807677, w: 0.7002721}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.9999999}
+    - name: joint20
+      parentName: joint19
+      position: {x: -0.017079217, y: -0.015338551, z: 0.0074941698}
+      rotation: {x: 0.000000029802319, y: -0.26257297, z: 0.00000006332993, w: 0.9649121}
+      scale: {x: 1.0000007, y: 1.0000002, z: 0.9999994}
+    - name: joint21
+      parentName: joint20
+      position: {x: -0.008995975, y: -0.01273912, z: 0.008815105}
+      rotation: {x: 0.00000012828302, y: 0.9647878, z: 0.000000041573795, w: 0.26302955}
+      scale: {x: 1.0000006, y: 1.0000002, z: 1.0000012}
+    - name: joint1
+      parentName: QuickRigCharacter_LeftHand
+      position: {x: -0.026326053, y: 0.020510675, z: 0.001416166}
+      rotation: {x: -0.706177, y: 0.03625141, z: -0.03625165, w: 0.7061769}
+      scale: {x: 0.9999999, y: 1.0000005, z: 0.99999994}
+    - name: joint2
+      parentName: joint1
+      position: {x: -0.022317026, y: -0.0026320345, z: -0.0028949864}
+      rotation: {x: 0.0037929094, y: -0.0058835857, z: -0.03313974, w: 0.9994262}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+    - name: joint3
+      parentName: joint2
+      position: {x: -0.013697136, y: -0.003714432, z: -0.0016853844}
+      rotation: {x: -0.0023220466, y: -0.044734072, z: 0.034095924, w: 0.9984142}
+      scale: {x: 1.0000001, y: 1.0000004, z: 0.9999998}
+    - name: joint4
+      parentName: joint3
+      position: {x: -0.0109832985, y: -0.0012668038, z: -0.00032260708}
+      rotation: {x: -0.00000000911935, y: 0.22975287, z: 0.0000000518011, w: 0.973249}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: joint5
+      parentName: QuickRigCharacter_LeftHand
+      position: {x: -0.027749524, y: 0.0013410044, z: 0.0005190186}
+      rotation: {x: -0.7067352, y: 0.022921741, z: -0.02292198, w: 0.7067352}
+      scale: {x: 0.9999999, y: 1.0000001, z: 0.99999964}
+    - name: joint6
+      parentName: joint5
+      position: {x: -0.019843798, y: -0.0025577908, z: -0.0012615068}
+      rotation: {x: -0, y: 0.00014058313, z: 0.000000050291412, w: 1}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1}
+    - name: joint7
+      parentName: joint6
+      position: {x: -0.01919693, y: -0.0035784706, z: -0.00010851398}
+      rotation: {x: -0.0014316785, y: -0.024724668, z: 0.0010881289, w: 0.99969274}
+      scale: {x: 1.0000004, y: 1.0000004, z: 0.99999994}
+    - name: joint8
+      parentName: joint7
+      position: {x: -0.013001546, y: -0.0022412878, z: -0.0005144698}
+      rotation: {x: -0.00000001744048, y: 1, z: 0.000000030383625, w: 0.000000040978183}
+      scale: {x: 1.0000013, y: 1.0000001, z: 1.0000015}
+    - name: joint10
+      parentName: QuickRigCharacter_LeftHand
+      position: {x: -0.026615892, y: -0.01551017, z: 0.00028355955}
+      rotation: {x: -0.7057828, y: 0.036276165, z: -0.048980284, w: 0.7058014}
+      scale: {x: 0.99999994, y: 1.0000002, z: 0.99999976}
+    - name: joint11
+      parentName: joint10
+      position: {x: -0.02203388, y: -0.0042964024, z: -0.0029301022}
+      rotation: {x: 0.0018955464, y: -0.04237384, z: 0.021248976, w: 0.99887407}
+      scale: {x: 0.9999998, y: 1, z: 1.0000002}
+    - name: joint12
+      parentName: joint11
+      position: {x: -0.016337333, y: -0.0015334652, z: 0.0002016939}
+      rotation: {x: -0.0064534335, y: -0.03775046, z: -0.03382165, w: 0.9986938}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: joint13
+      parentName: joint12
+      position: {x: -0.010916005, y: -0.0023722178, z: 0.00029728387}
+      rotation: {x: 0.00000009131414, y: 0.6452075, z: 0.00000006180556, w: 0.76400745}
+      scale: {x: 1.0000002, y: 0.9999998, z: 1.0000007}
+    - name: joint14
+      parentName: QuickRigCharacter_LeftHand
+      position: {x: -0.02767507, y: -0.029726373, z: 0.0017868478}
+      rotation: {x: -0.7066878, y: 0.024339553, z: -0.024339734, w: 0.70668775}
+      scale: {x: 0.9999998, y: 1.0000005, z: 0.9999999}
+    - name: joint15
+      parentName: joint14
+      position: {x: -0.016172286, y: -0.0026759263, z: -0.0014705341}
+      rotation: {x: 0.035304528, y: 0.032968502, z: -0.15389483, w: 0.9869059}
+      scale: {x: 1.0000002, y: 1, z: 0.9999999}
+    - name: joint16
+      parentName: joint15
+      position: {x: -0.008252806, y: -0.005001432, z: -0.0009939346}
+      rotation: {x: -0.040771186, y: -0.019744094, z: 0.21238342, w: 0.9761358}
+      scale: {x: 1.0000007, y: 1.0000002, z: 0.99999994}
+    - name: joint17
+      parentName: joint16
+      position: {x: -0.008517509, y: -0.00040686535, z: -0.00090640853}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: QuickRigCharacter_RightShoulder
+      parentName: QuickRigCharacter_Spine2
+      position: {x: -0.051295076, y: -0.025333451, z: -0.09495093}
+      rotation: {x: -0.25044763, y: -0.7010169, z: 0.6154119, w: -0.2590745}
+      scale: {x: 0.99999976, y: 1.0000011, z: 1.0000008}
+    - name: QuickRigCharacter_RightArm
+      parentName: QuickRigCharacter_RightShoulder
+      position: {x: 0.062316544, y: 0.12958439, z: 0.018420858}
+      rotation: {x: -0.735384, y: 0.071775965, z: 0.028845057, w: -0.6732211}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+    - name: QuickRigCharacter_RightForeArm
+      parentName: QuickRigCharacter_RightArm
+      position: {x: 0.07659426, y: -0.007298853, z: -0.12801379}
+      rotation: {x: -0, y: 0.000000085610786, z: -0.000000009219621, w: 1}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
+    - name: QuickRigCharacter_RightHand
+      parentName: QuickRigCharacter_RightForeArm
+      position: {x: 0.017126951, y: 2.037745e-17, z: -0.024203975}
+      rotation: {x: -0.00036365175, y: 0.43103528, z: -0.00062925264, w: 0.90233487}
+      scale: {x: 1.0000005, y: 1.0000008, z: 1.0000008}
+    - name: joint25
+      parentName: QuickRigCharacter_RightHand
+      position: {x: 0.0041822223, y: -0.036918946, z: -0.019546267}
+      rotation: {x: 0.700272, y: 0.09807651, z: 0.09807654, w: 0.7002722}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000002}
+    - name: joint20 1
+      parentName: joint25
+      position: {x: 0.008953527, y: -0.007147322, z: 0.008179515}
+      rotation: {x: 0.00000020861621, y: -0.26257282, z: 0.000000011175868, w: 0.9649122}
+      scale: {x: 1.0000004, y: 1, z: 0.99999994}
+    - name: joint21 1
+      parentName: joint20 1
+      position: {x: 0.0150090465, y: -0.012555004, z: 0.0057773786}
+      rotation: {x: -0.0000000073485307, y: 0.9647878, z: -0.000000086091944, w: 0.26302966}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000011}
+    - name: joint30
+      parentName: QuickRigCharacter_RightHand
+      position: {x: 0.030768301, y: -0.020330025, z: 0.0017634231}
+      rotation: {x: 0.69981885, y: -0.046324026, z: 0.039689902, w: 0.7117109}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000005}
+    - name: joint2 1
+      parentName: joint30
+      position: {x: 0.01962578, y: -0.0025905066, z: 0.0013482895}
+      rotation: {x: 0.0004544554, y: -0.0061512524, z: -0.003637696, w: 0.99997437}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1.0000001}
+    - name: joint3 1
+      parentName: joint2 1
+      position: {x: 0.011872864, y: -0.0005869443, z: 0.0011025277}
+      rotation: {x: 0.00000009664184, y: -0.043355543, z: 0.00000012089691, w: 0.99905974}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: joint4 1
+      parentName: joint3 1
+      position: {x: 0.01468577, y: 0.000049977152, z: 3.1075035e-17}
+      rotation: {x: -0.0000001230844, y: 0.22975293, z: -0.000000041666695, w: 0.97324896}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: joint35
+      parentName: QuickRigCharacter_RightHand
+      position: {x: 0.028667463, y: -0.005378353, z: 0.003180516}
+      rotation: {x: 0.70118743, y: -0.057724956, z: 0.023522763, w: 0.710247}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000005}
+    - name: joint6 1
+      parentName: joint35
+      position: {x: 0.021205928, y: -0.0025572875, z: 0.0005370094}
+      rotation: {x: 0.00035825346, y: 0.0008934879, z: -0.0105009265, w: 0.9999444}
+      scale: {x: 0.9999999, y: 1.0000002, z: 1}
+    - name: joint7 1
+      parentName: joint6 1
+      position: {x: 0.017494468, y: -0.0002987925, z: 0.0005778002}
+      rotation: {x: 0.000043837215, y: -0.02976884, z: 0.008239365, w: 0.9995229}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: joint8 1
+      parentName: joint7 1
+      position: {x: 0.016241882, y: -0.0018179221, z: 1.4998988e-17}
+      rotation: {x: 0.000000023718727, y: 1, z: 0.000000088684686, w: -0.000000014901159}
+      scale: {x: 0.99999964, y: 0.99999994, z: 0.9999995}
+    - name: joint40
+      parentName: QuickRigCharacter_RightHand
+      position: {x: 0.03002028, y: 0.011156619, z: 0.001421316}
+      rotation: {x: 0.7079571, y: -0.01673173, z: 0.013212128, w: 0.70593363}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: joint11 1
+      parentName: joint40
+      position: {x: 0.02105492, y: 0.0002933958, z: 0.0005976712}
+      rotation: {x: -0.00048747624, y: -0.0020625058, z: 0.029050274, w: 0.9995758}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1.0000001}
+    - name: joint12 1
+      parentName: joint11 1
+      position: {x: 0.016357727, y: -0.0018381847, z: 0.0010991176}
+      rotation: {x: -0.00016695829, y: -0.07654811, z: 0.0032764554, w: 0.9970605}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
+    - name: joint13 1
+      parentName: joint12 1
+      position: {x: 0.011307333, y: -0.0022069402, z: -0.0014269098}
+      rotation: {x: -0.000000014685877, y: 0.6452074, z: -0.00000012671083, w: 0.7640075}
+      scale: {x: 1.0000006, y: 0.9999999, z: 1.0000001}
+    - name: joint45
+      parentName: QuickRigCharacter_RightHand
+      position: {x: 0.029002491, y: 0.026736412, z: -0.00085425924}
+      rotation: {x: 0.700699, y: -0.040337335, z: 0.034859505, w: 0.7114623}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000004}
+    - name: joint15 1
+      parentName: joint45
+      position: {x: 0.015140757, y: -0.0019696353, z: 0.0012774875}
+      rotation: {x: -0.00000008940696, y: 0.08324774, z: -0, w: 0.9965289}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: joint16 1
+      parentName: joint15 1
+      position: {x: 0.012324778, y: -0.0020131448, z: 0.0026055633}
+      rotation: {x: 0.000000064199554, y: -0.07237917, z: -0.00000005533552, w: 0.9973773}
+      scale: {x: 1.0000004, y: 1, z: 1.0000004}
+    - name: joint17 1
+      parentName: joint16 1
+      position: {x: 0.008493109, y: -0.0007165719, z: 0.0005661545}
+      rotation: {x: -0, y: 0.000000007450579, z: -4.440891e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: QuickRigCharacter_Neck
+      parentName: QuickRigCharacter_Spine2
+      position: {x: -0.13007443, y: -0.039004944, z: -1.9223793e-17}
+      rotation: {x: -0.009702059, y: -0.0017662888, z: 0.08213429, w: -0.9965725}
+      scale: {x: 1.0000006, y: 1.000001, z: 1.0000002}
+    - name: QuickRigCharacter_Head
+      parentName: QuickRigCharacter_Neck
+      position: {x: -0.1822917, y: -0.11854436, z: -3.4265348e-17}
+      rotation: {x: -0, y: -0, z: -3.0377123e-10, w: 1}
+      scale: {x: 1.0000007, y: 1.0000007, z: 1.0000007}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

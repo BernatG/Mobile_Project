@@ -7,6 +7,7 @@ public class Stone : MonoBehaviour
     public Route currentRoute;
 
     public List<Player> players = new List<Player>();
+    public List<Animator> animatorPlayer = new List<Animator>();
 
     public SmoothFollowCSharp mCFollowPlayer;
 
@@ -30,14 +31,14 @@ public class Stone : MonoBehaviour
 
             if(players[roundPlayer].routePosition+steps < currentRoute.childNodeList.Count)
             {
-                Debug.Log(players[roundPlayer].routePosition);
+                animatorPlayer[roundPlayer].SetBool("run", true);
                 StartCoroutine(Move());
 
             }           
             else
             {
                 Debug.Log("Rolled Number is to high");
-            }      
+            }     
             
         }
     }
@@ -46,6 +47,7 @@ public class Stone : MonoBehaviour
     {
         if(isMoving)
         {
+
             yield break;
         }
         isMoving = true;
@@ -62,11 +64,12 @@ public class Stone : MonoBehaviour
             while (MoveToNextNode(nextPos)) { yield return null; }
             
 
-            yield return new WaitForSeconds(0.1f);
+            //yield return new WaitForSeconds(0.1f);
             steps--;
             players[roundPlayer].routePosition++;
         }
 
+        animatorPlayer[roundPlayer].SetBool("run", false);
         isMoving = false;
     }
 
