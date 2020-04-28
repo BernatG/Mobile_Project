@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
+using NDream.AirConsole;
 
 
 public class RankingGame_JumpAndDown : MonoBehaviour
@@ -241,6 +242,20 @@ public class RankingGame_JumpAndDown : MonoBehaviour
                 NumberRankingPlayer4.sprite = spriteNumberWin;
                 Debug.Log("Player 4 movimentos: " + stone.stepsPlayer4);
                 break;
+        }
+
+        StartCoroutine(ExampleCoroutine());
+        
+    }
+
+    IEnumerator ExampleCoroutine()
+    {
+        yield return new WaitForSeconds(5);
+
+        List<int> connectedDevicesJumpAndDown = AirConsole.instance.GetControllerDeviceIds();
+        foreach (int deviceID in connectedDevicesJumpAndDown)
+        {
+            AirConsole.instance.Message(deviceID, "tablero");
         }
 
         SceneManager.LoadScene("SceneTablero");

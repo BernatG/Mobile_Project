@@ -24,6 +24,8 @@ public class Stone : MonoBehaviour
 
     bool isMoving;
 
+    private bool waitSecond = false;
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -37,10 +39,10 @@ public class Stone : MonoBehaviour
         {
             if(round == 0)
             {
-                RandomMiniGame();
+                StartCoroutine(RandomMiniGame());
                 round++;
             }
-            else if (SceneManager.GetActiveScene().name == "SceneTablero")
+            else if (SceneManager.GetActiveScene().name == "SceneTablero" && !waitSecond)
             {
                 roundPlayer++;
                 Debug.Log("Le toca moverse al jugador: " + roundPlayer);
@@ -152,26 +154,17 @@ public class Stone : MonoBehaviour
         isMoving = false;
         if(roundPlayer == 3)
         {
-            RandomMiniGame();
+            StartCoroutine(RandomMiniGame());
         }
     }
 
-    bool MoveToRotateNode(Quaternion rota)
+    IEnumerator RandomMiniGame()
     {
-        return rota != (players[roundPlayer].transform.rotation = Quaternion.Lerp(players[roundPlayer].transform.rotation, rota, 10f * Time.deltaTime));
-    }
+        waitSecond = true;
+        yield return new WaitForSeconds(1);
+        waitSecond = false;
 
-    bool MoveToNextNode(Vector3 goal)
-    {
-
-        
-        return goal != (players[roundPlayer].transform.position = Vector3.MoveTowards(players[roundPlayer].transform.position, goal, 10f * Time.deltaTime));       
-
-    }
-
-    void RandomMiniGame()
-    {
-        int ranom = Random.RandomRange(0, 2);
+        int ranom = Random.RandomRange(0, 1);
         switch (ranom)
         {
             case 0:
@@ -192,4 +185,41 @@ public class Stone : MonoBehaviour
                 break;
         }
     }
+
+    bool MoveToRotateNode(Quaternion rota)
+    {
+        return rota != (players[roundPlayer].transform.rotation = Quaternion.Lerp(players[roundPlayer].transform.rotation, rota, 10f * Time.deltaTime));
+    }
+
+    bool MoveToNextNode(Vector3 goal)
+    {
+
+        
+        return goal != (players[roundPlayer].transform.position = Vector3.MoveTowards(players[roundPlayer].transform.position, goal, 10f * Time.deltaTime));       
+
+    }
+
+    //void RandomMiniGame()
+    //{
+    //    int ranom = Random.RandomRange(0, 1);
+    //    switch (ranom)
+    //    {
+    //        case 0:
+    //            List<int> connectedDevicesJumpAndDown = AirConsole.instance.GetControllerDeviceIds();
+    //            foreach (int deviceID in connectedDevicesJumpAndDown)
+    //            {
+    //                AirConsole.instance.Message(deviceID, "jumpAndDown");
+    //            }
+    //            SceneManager.LoadScene("SceneJumpAndDown");
+    //            break;
+    //        case 1:
+    //            List<int> connectedDevicesBasket = AirConsole.instance.GetControllerDeviceIds();
+    //            foreach (int deviceID in connectedDevicesBasket)
+    //            {
+    //                AirConsole.instance.Message(deviceID, "gameBasket");
+    //            }
+    //            SceneManager.LoadScene("SceneBasket");
+    //            break;
+    //    }
+    //}
 }
