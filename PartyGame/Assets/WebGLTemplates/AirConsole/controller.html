@@ -116,15 +116,8 @@
   
         var me = this;
         
-        //me.airconsole = new AirConsole({"orientation": "landscape", "synchronize_time" : "true"});
-
-		me.airconsole = new AirConsole({"orientation": "portrait", "synchronize_time" : "true"});
-		tablero.style.display = "none";
-		tableroReady.style.display = "none";
-        basket.style.display = "none";
-        jumpAndDown.style.display = "none";
-        swiming.style.display = "block";
-
+        me.airconsole = new AirConsole({"orientation": "landscape", "synchronize_time" : "true"});
+		
         me.airconsole.onMessage = function(from, data) {
           console.log("onMessage", from, data);
 		  if (data === "tableroReady")
@@ -154,6 +147,16 @@
 			tableroReady.style.display = "none";
 			basket.style.display = "block";
 			jumpAndDown.style.display = "none";
+		  }
+		  else if (data === "swiming")
+		  {
+			me.airconsole = new AirConsole({"orientation": "portrait", "synchronize_time" : "true"});
+			tablero.style.display = "none";
+			tableroReady.style.display = "none";
+			basket.style.display = "none";
+			jumpAndDown.style.display = "none";
+			swiming.style.display = "block";
+
 		  }
         };
   

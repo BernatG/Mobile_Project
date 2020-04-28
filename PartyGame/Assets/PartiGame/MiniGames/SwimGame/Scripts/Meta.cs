@@ -14,11 +14,14 @@ public class Meta : MonoBehaviour
     public GameObject canvasRankingGame;
     public GameObject timeGame;
 
+    public GameObject timerPanel;
+
     private void Update()
     {
         if(ranking >= 5)
         {
             canvasRankingGame.SetActive(true);
+            timerPanel.SetActive(false);
             timeGame.SetActive(false);
         }
     }
@@ -31,6 +34,7 @@ public class Meta : MonoBehaviour
             {
                 player1.rankngPlayer = ranking;
                 player1.go = false;
+                Debug.Log("Posicion 1: " + player1.rankngPlayer);
                 ranking++;
             }
         }
@@ -40,6 +44,7 @@ public class Meta : MonoBehaviour
             {
                 player2.rankngPlayer = ranking;
                 player2.go = false;
+                Debug.Log("Posicion 2: " + player2.rankngPlayer);
                 ranking++;
             }
         }
@@ -49,6 +54,7 @@ public class Meta : MonoBehaviour
             {
                 player3.rankngPlayer = ranking;
                 player3.go = false;
+                Debug.Log("Posicion 3: " + player3.rankngPlayer);
                 ranking++;
             }
         }
@@ -58,6 +64,7 @@ public class Meta : MonoBehaviour
             {
                 player4.rankngPlayer = ranking;
                 player4.go = false;
+                Debug.Log("Posicion 4: " + player4.rankngPlayer);
                 ranking++;
             }
         }

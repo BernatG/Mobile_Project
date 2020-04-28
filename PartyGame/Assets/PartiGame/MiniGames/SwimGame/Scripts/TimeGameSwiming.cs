@@ -22,6 +22,8 @@ public class TimeGameSwiming : MonoBehaviour
     public PlayerSwiming player3;
     public PlayerSwiming player4;
 
+    public GameObject timerPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +33,7 @@ public class TimeGameSwiming : MonoBehaviour
         time = 5;
         textStartGame.text = time.ToString();
         startGameGo.SetActive(true);
-
-
+        timerPanel.SetActive(true);
 
         CanvasRankingGame.SetActive(false);
     }
@@ -55,6 +56,7 @@ public class TimeGameSwiming : MonoBehaviour
                     player4.go = true;
                     time = 30;
                     startGameGo.SetActive(false);
+                    timerPanel.SetActive(true);
                 }
                 clock.reset();
             }
@@ -71,7 +73,8 @@ public class TimeGameSwiming : MonoBehaviour
                     player2.go = false;
                     player3.go = false;
                     player4.go = false;
-                    CanvasRankingGame.SetActive(true);                
+                    CanvasRankingGame.SetActive(true);   
+                    timerPanel.SetActive(false);
                 }
                 clock.reset();
             }

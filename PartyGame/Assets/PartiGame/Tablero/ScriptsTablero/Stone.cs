@@ -164,10 +164,18 @@ public class Stone : MonoBehaviour
         yield return new WaitForSeconds(1);
         waitSecond = false;
 
-        int ranom = Random.RandomRange(0, 1);
-        switch (ranom)
+        int random = Random.RandomRange(0, 3);
+        switch (random)
         {
             case 0:
+                List<int> connectedDevicesSwiming = AirConsole.instance.GetControllerDeviceIds();
+                foreach (int deviceID in connectedDevicesSwiming)
+                {
+                    AirConsole.instance.Message(deviceID, "swiming");
+                }
+                SceneManager.LoadScene("SceneSwiming");
+                break;
+            case 1:
                 List<int> connectedDevicesJumpAndDown = AirConsole.instance.GetControllerDeviceIds();
                 foreach (int deviceID in connectedDevicesJumpAndDown)
                 {
@@ -175,7 +183,7 @@ public class Stone : MonoBehaviour
                 }
                 SceneManager.LoadScene("SceneJumpAndDown");
                 break;
-            case 1:
+            case 2:
                 List<int> connectedDevicesBasket = AirConsole.instance.GetControllerDeviceIds();
                 foreach (int deviceID in connectedDevicesBasket)
                 {
@@ -199,27 +207,4 @@ public class Stone : MonoBehaviour
 
     }
 
-    //void RandomMiniGame()
-    //{
-    //    int ranom = Random.RandomRange(0, 1);
-    //    switch (ranom)
-    //    {
-    //        case 0:
-    //            List<int> connectedDevicesJumpAndDown = AirConsole.instance.GetControllerDeviceIds();
-    //            foreach (int deviceID in connectedDevicesJumpAndDown)
-    //            {
-    //                AirConsole.instance.Message(deviceID, "jumpAndDown");
-    //            }
-    //            SceneManager.LoadScene("SceneJumpAndDown");
-    //            break;
-    //        case 1:
-    //            List<int> connectedDevicesBasket = AirConsole.instance.GetControllerDeviceIds();
-    //            foreach (int deviceID in connectedDevicesBasket)
-    //            {
-    //                AirConsole.instance.Message(deviceID, "gameBasket");
-    //            }
-    //            SceneManager.LoadScene("SceneBasket");
-    //            break;
-    //    }
-    //}
 }

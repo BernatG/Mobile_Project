@@ -154,14 +154,7 @@ public class RankingGame : MonoBehaviour
                         pointsPlayer1 = points[i];
                         Debug.Log("Quarto ganador: Jugador 1");
                         stone.stepsPlayer1 = 1;
-
-                        List<int> connectedDevices = AirConsole.instance.GetControllerDeviceIds();
-                        foreach (int deviceID in connectedDevices)
-                        {
-                            AirConsole.instance.Message(deviceID, "tablero");
-                        }
-
-                        SceneManager.LoadScene("SceneTablero");
+                        StartCoroutine(ExampleCoroutine());
                     }
                     else if (points[i] == player2.points && pointsPlayer2 == 0)
                     {
@@ -170,13 +163,7 @@ public class RankingGame : MonoBehaviour
                         Debug.Log("Quarto ganador: Jugador 2");
                         stone.stepsPlayer2 = 1;
 
-                        List<int> connectedDevices = AirConsole.instance.GetControllerDeviceIds();
-                        foreach (int deviceID in connectedDevices)
-                        {
-                            AirConsole.instance.Message(deviceID, "tablero");
-                        }
-
-                        SceneManager.LoadScene("SceneTablero");
+                        StartCoroutine(ExampleCoroutine());
                     }
                     else if (points[i] == player3.points && pointsPlayer3 == 0)
                     {
@@ -185,13 +172,7 @@ public class RankingGame : MonoBehaviour
                         Debug.Log("Quarto ganador: Jugador 3");
                         stone.stepsPlayer3 = 1;
 
-                        List<int> connectedDevices = AirConsole.instance.GetControllerDeviceIds();
-                        foreach (int deviceID in connectedDevices)
-                        {
-                            AirConsole.instance.Message(deviceID, "tablero");
-                        }
-
-                        SceneManager.LoadScene("SceneTablero");
+                        StartCoroutine(ExampleCoroutine());
                     }
                     else if (points[i] == player4.points && pointsPlayer4 == 0)
                     {
@@ -200,17 +181,24 @@ public class RankingGame : MonoBehaviour
                         Debug.Log("Quarto ganador: Jugador 4");
                         stone.stepsPlayer4 = 1;
 
-                        List<int> connectedDevices = AirConsole.instance.GetControllerDeviceIds();
-                        foreach (int deviceID in connectedDevices)
-                        {
-                            AirConsole.instance.Message(deviceID, "tablero");
-                        }
-
-                        SceneManager.LoadScene("SceneTablero");
+                        StartCoroutine(ExampleCoroutine());
                     }
                     break;
             }
         }
     }
-    
+
+    IEnumerator ExampleCoroutine()
+    {
+        yield return new WaitForSeconds(5);
+
+        List<int> connectedDevicesJumpAndDown = AirConsole.instance.GetControllerDeviceIds();
+        foreach (int deviceID in connectedDevicesJumpAndDown)
+        {
+            AirConsole.instance.Message(deviceID, "tablero");
+        }
+
+        SceneManager.LoadScene("SceneTablero");
+    }
+
 }

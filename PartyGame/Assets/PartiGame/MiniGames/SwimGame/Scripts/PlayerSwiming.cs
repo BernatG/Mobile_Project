@@ -18,6 +18,7 @@ public class PlayerSwiming : MonoBehaviour
     int clicks = 0;
 
     public bool go = false;
+    private bool okPresButton;
 
     public int rankngPlayer = 0;
  
@@ -27,7 +28,8 @@ public class PlayerSwiming : MonoBehaviour
     {
         contador = 0;
         rb = GetComponent<Rigidbody>();
-        clock = new Clock();        
+        clock = new Clock();
+        okPresButton = true;
     }
 
     public void ButtonInput(string input)
@@ -38,11 +40,11 @@ public class PlayerSwiming : MonoBehaviour
             case "swiming":
                 swiming = true;
                 clicks += 1;
-                Debug.Log(clicks);
                 break;
 
             case "swiming-up":
                 swiming = false;
+                okPresButton = true;
                 break;
         }
     }
@@ -53,8 +55,24 @@ public class PlayerSwiming : MonoBehaviour
         {
             if (swiming)
             {
-                contador++;
-                thrust += 0.002f;
+                if (okPresButton)
+                {
+                    contador++;
+                    thrust += 0.007f;
+                    Debug.Log(thrust);
+                    okPresButton = false;
+                }
+                else
+                {
+                    if (clock.getTime() >= 0.05f)
+                    {
+                        if (thrust >= 0)
+                        {
+                            thrust -= 0.001f;
+                        }
+                        clock.reset();
+                    }
+                }
             }
             else
             {
@@ -68,7 +86,10 @@ public class PlayerSwiming : MonoBehaviour
                 }
 
             }
-            rb.MovePosition(rb.position + new Vector3(-thrust, 0, 0));
+            if(transform.position.x <= 45)
+            {
+                rb.MovePosition(rb.position + new Vector3(-thrust, 0, 0));
+            }
         }
     }
 
