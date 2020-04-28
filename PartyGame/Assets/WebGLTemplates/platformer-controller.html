@@ -22,6 +22,20 @@
         position: absolute;
     } 
 
+	/*CSS Main Menu*/
+		#playTablero-button {
+		top: 0;
+            width: 100%;
+            height: 50%;
+			background-color: green;
+		}
+		#exit-button{
+			top: 50%;
+            width: 100%;
+            height: 50%;
+			background-color: red;
+		}
+
     /*CSS Tablero*/
         #start-button {
             top: 15%;
@@ -101,13 +115,15 @@
         //upButton.style.display = "none";//ocultar botton
         //upButton.style.display = "block";//mostrar botton
         
+		const mainMenu = document.getElementById('mainMenu')
         const tablero = document.getElementById('tablero');
 		const tableroReady = document.getElementById('tableroReady')
         const basket = document.getElementById('basket');
         const jumpAndDown = document.getElementById('jumpAndDown');
 		const swiming = document.getElementById('swiming');
   
-        tablero.style.display = "block";
+		mainMenu.style.display = "block";
+        tablero.style.display = "none";
 		tableroReady.style.display = "none";
         basket.style.display = "none";
         jumpAndDown.style.display = "none";
@@ -127,6 +143,7 @@
 		  }
 		  else if (data === "tablero")
 		  {
+			mainMenu.style.display = "none";
 			tablero.style.display = "block";
 			tableroReady.style.display = "none";
 			basket.style.display = "none";
@@ -223,6 +240,13 @@
               <h1 id="text-start" align="center">Touch</h1>
           </div>
       </div>
+    </div>
+
+	<!--MainMenu-->
+    <div id="mainMenu">
+      <div id="background"></div>
+      <div class="button" id="playTablero-button" ontouchstart="window.app.sendMessageToScreen('playTablero')" ontouchend="window.app.sendMessageToScreen('playTablero-up')"></div>
+      <div class="button" id="exit-button" ontouchstart="window.app.sendMessageToScreen('exit')" ontouchend="window.app.sendMessageToScreen('exit-up')"></div>
     </div>
 
   </body>

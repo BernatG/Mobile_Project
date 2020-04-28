@@ -44,9 +44,19 @@ public class TableroLogic : MonoBehaviour {
         if (connectedDevices != null)
         {
             player1.SetActive(true);
+            players.Add(connectedDevices[0], player1.GetComponent<Player>());
             player2.SetActive(true);
+            players.Add(connectedDevices[1], player2.GetComponent<Player>());
             player3.SetActive(true);
+            players.Add(connectedDevices[2], player3.GetComponent<Player>());
             player4.SetActive(true);
+            players.Add(connectedDevices[3], player4.GetComponent<Player>());
+
+            foreach (int ids in connectedDevices)
+            {
+                AirConsole.instance.Message(ids, "tableroReady");
+            }
+            logicStartGame.SetActive(true);
         }
 
     }
