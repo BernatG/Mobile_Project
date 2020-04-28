@@ -80,6 +80,14 @@
           background-color: blue;
         }    
 
+	/*CSS GameSwiming*/
+		#swiming-button{
+
+			height: 100%;
+            width: 100%;
+			background-color: blue;
+		}
+
   
     </style>
     
@@ -97,17 +105,25 @@
 		const tableroReady = document.getElementById('tableroReady')
         const basket = document.getElementById('basket');
         const jumpAndDown = document.getElementById('jumpAndDown');
+		const swiming = document.getElementById('swiming');
   
         tablero.style.display = "block";
 		tableroReady.style.display = "none";
         basket.style.display = "none";
         jumpAndDown.style.display = "none";
+        swiming.style.display = "none";
   
   
         var me = this;
         
-        me.airconsole = new AirConsole({"orientation": "landscape", "synchronize_time" : "true"});
+        //me.airconsole = new AirConsole({"orientation": "landscape", "synchronize_time" : "true"});
 
+		me.airconsole = new AirConsole({"orientation": "portrait", "synchronize_time" : "true"});
+		tablero.style.display = "none";
+		tableroReady.style.display = "none";
+        basket.style.display = "none";
+        jumpAndDown.style.display = "none";
+        swiming.style.display = "block";
 
         me.airconsole.onMessage = function(from, data) {
           console.log("onMessage", from, data);
@@ -195,6 +211,15 @@
       <div id="background"></div>
       <div class="button" id="up-button-jumpAndDown" ontouchstart="window.app.sendMessageToScreen('up')" ontouchend="window.app.sendMessageToScreen('up-up')"></div>
       <div class="button" id="down-button-jumpAndDown" ontouchstart="window.app.sendMessageToScreen('down')" ontouchend="window.app.sendMessageToScreen('down-up')"></div>
+    </div>
+
+	<!--GameSwiming-->
+	<div id="swiming">
+      <div id="background">
+          <div class="button" id="swiming-button" ontouchstart="window.app.sendMessageToScreen('swiming')" ontouchend="window.app.sendMessageToScreen('swiming-up')">
+              <h1 id="text-start" align="center">Touch</h1>
+          </div>
+      </div>
     </div>
 
   </body>
