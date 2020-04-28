@@ -16,7 +16,7 @@ public class PlatformerExampleLogic_JumpAndDown : MonoBehaviour {
 	public Dictionary<int, PlayerController_JumpAndDown> players = new Dictionary<int, PlayerController_JumpAndDown> ();
     int idPlayer = 0;
 
-	void Awake () {
+    void Awake () {
         player1.SetActive(false);
         player2.SetActive(false);
         player3.SetActive(false);
@@ -24,8 +24,24 @@ public class PlatformerExampleLogic_JumpAndDown : MonoBehaviour {
         timeGame.SetActive(false);
 		AirConsole.instance.onMessage += OnMessage;		
 		AirConsole.instance.onReady += OnReady;		
-		AirConsole.instance.onConnect += OnConnect;		
-	}
+		AirConsole.instance.onConnect += OnConnect;
+
+        List<int> connectedDevices = AirConsole.instance.GetControllerDeviceIds();
+
+        player1.SetActive(true);
+        players.Add(connectedDevices[0], player1.GetComponent<PlayerController_JumpAndDown>());
+        
+        player2.SetActive(true);
+        players.Add(connectedDevices[1], player2.GetComponent<PlayerController_JumpAndDown>());
+
+        player3.SetActive(true);
+        players.Add(connectedDevices[2], player3.GetComponent<PlayerController_JumpAndDown>());
+
+        player4.SetActive(true);
+        players.Add(connectedDevices[3], player4.GetComponent<PlayerController_JumpAndDown>());
+        timeGame.SetActive(true);
+                
+    }
 
 	void OnReady(string code){
 		//Since people might be coming to the game from the AirConsole store once the game is live, 

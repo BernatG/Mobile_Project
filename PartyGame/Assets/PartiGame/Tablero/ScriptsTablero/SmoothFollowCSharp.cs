@@ -25,6 +25,17 @@ Then we apply the smoothed values to the transform's position.
     public float heightDamping = 2.0f;
     public float rotationDamping = 3.0f;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
     void LateUpdate()
     {
         // Early out if we don't have a target

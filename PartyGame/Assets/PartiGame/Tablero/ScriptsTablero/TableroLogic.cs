@@ -6,10 +6,10 @@ using Newtonsoft.Json.Linq;
 
 public class TableroLogic : MonoBehaviour {
 
-	public GameObject player1;
-	public GameObject player2;
-	public GameObject player3;
-	public GameObject player4;
+	private GameObject player1;
+	private GameObject player2;
+	private GameObject player3;
+	private GameObject player4;
     public GameObject logicStartGame;
 
 
@@ -17,6 +17,14 @@ public class TableroLogic : MonoBehaviour {
     int idPlayer = 0;
 
 	void Awake () {
+
+        DontDestroyOnLoad(this.gameObject);
+        
+        player1 = GameObject.Find("Player1");
+        player2 = GameObject.Find("Player2");
+        player3 = GameObject.Find("Player3");
+        player4 = GameObject.Find("Player4");
+
         player1.SetActive(false);
         player2.SetActive(false);
         player3.SetActive(false);
@@ -25,8 +33,23 @@ public class TableroLogic : MonoBehaviour {
         
 		AirConsole.instance.onMessage += OnMessage;		
 		AirConsole.instance.onReady += OnReady;		
-		AirConsole.instance.onConnect += OnConnect;		
-	}
+		AirConsole.instance.onConnect += OnConnect;
+
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+
+        List<int> connectedDevices = AirConsole.instance.GetControllerDeviceIds();
+        if (connectedDevices != null)
+        {
+            player1.SetActive(true);
+            player2.SetActive(true);
+            player3.SetActive(true);
+            player4.SetActive(true);
+        }
+
+    }
 
 	void OnReady(string code){
 		//Since people might be coming to the game from the AirConsole store once the game is live, 

@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
+
 
 public class RankingGame_JumpAndDown : MonoBehaviour
 {
@@ -33,8 +35,12 @@ public class RankingGame_JumpAndDown : MonoBehaviour
 
     public GameObject canvasRanking;
 
+    private Stone stone;
+
     private void Start()
     {
+        stone = (Stone)FindObjectOfType(typeof(Stone));
+
         canvasRanking.SetActive(false);
         player1ok = false;
         player2ok = false;
@@ -54,6 +60,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
                     if (winerTwo != 0)
                     {
                         winerOne = 1;
+                        stone.stepsPlayer1 = 4;
                         Debug.Log("Winer 1: " + winerOne);
                         player1ok = true;
                         canvasRanking.SetActive(true);
@@ -65,12 +72,14 @@ public class RankingGame_JumpAndDown : MonoBehaviour
                     else
                     {
                         winerTwo = 1;
+                        stone.stepsPlayer1 = 3;
                         Debug.Log("Winer 2: " + winerTwo);
                         player1ok = true;
                     }
                 }
                 else
                 {
+                    stone.stepsPlayer1 = 2;
                     winerThree = 1;
                     Debug.Log("Winer 3: " + winerThree);
                     player1ok = true;
@@ -78,6 +87,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
             }
             else
             {
+                stone.stepsPlayer1 = 1;
                 winerFour = 1;
                 Debug.Log("Winer 4: " + winerFour);
                 player1ok = true;
@@ -92,6 +102,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
                     if (winerTwo != 0)
                     {
                         winerOne = 2;
+                        stone.stepsPlayer2 = 4;
                         Debug.Log("Winer 1: " + winerOne);
                         player2ok = true;
                         canvasRanking.SetActive(true);
@@ -103,6 +114,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
                     else
                     {
                         winerTwo = 2;
+                        stone.stepsPlayer2 = 3;
                         Debug.Log("Winer 2: " + winerTwo);
                         player2ok = true;
                     }
@@ -110,6 +122,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
                 else
                 {
                     winerThree = 2;
+                    stone.stepsPlayer2 = 2;
                     Debug.Log("Winer 3: " + winerThree);
                     player2ok = true;
                 }
@@ -117,6 +130,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
             else
             {
                 winerFour = 2;
+                stone.stepsPlayer2 = 1;
                 Debug.Log("Winer 4: " + winerFour);
                 player2ok = true;
             }
@@ -130,6 +144,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
                     if (winerTwo != 0)
                     {
                         winerOne = 3;
+                        stone.stepsPlayer3 = 4;
                         Debug.Log("Winer 1: " + winerOne);
                         canvasRanking.SetActive(true);
                         Ranking(winerOne, first);
@@ -141,6 +156,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
                     else
                     {
                         winerTwo = 3;
+                        stone.stepsPlayer3 = 3;
                         Debug.Log("Winer 2: " + winerTwo);
                         player3ok = true;
                     }
@@ -148,6 +164,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
                 else
                 {
                     winerThree = 3;
+                    stone.stepsPlayer3 = 2;
                     Debug.Log("Winer 3: " + winerThree);
                     player3ok = true;
                 }
@@ -155,6 +172,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
             else
             {
                 winerFour = 3;
+                stone.stepsPlayer3 = 1;
                 Debug.Log("Winer 4: " + winerFour);
                 player3ok = true;
             }
@@ -168,6 +186,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
                     if (winerTwo != 0)
                     {
                         winerOne = 4;
+                        stone.stepsPlayer4 = 4;
                         Debug.Log("Winer 1: " + winerOne);
                         player1ok = true;
                         canvasRanking.SetActive(true);
@@ -179,6 +198,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
                     else
                     {
                         winerTwo = 4;
+                        stone.stepsPlayer4 = 3;
                         Debug.Log("Winer 2: " + winerTwo);
                         player4ok = true;
                     }
@@ -186,6 +206,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
                 else
                 {
                     winerThree = 4;
+                    stone.stepsPlayer4 = 2;
                     Debug.Log("Winer 3: " + winerThree);
                     player4ok = true;
                 }
@@ -193,6 +214,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
             else
             {
                 winerFour = 4;
+                stone.stepsPlayer4 = 1;
                 Debug.Log("Winer 4: " + winerFour);
                 player4ok = true;
             }
@@ -205,16 +227,22 @@ public class RankingGame_JumpAndDown : MonoBehaviour
         {
             case 1:
                 NumberRankingPlayer1.sprite = spriteNumberWin;
+                Debug.Log("Player 1 movimentos: " + stone.stepsPlayer1);
                 break;
             case 2:
                 NumberRankingPlayer2.sprite = spriteNumberWin;
+                Debug.Log("Player 2 movimentos: " + stone.stepsPlayer2);
                 break;
             case 3:
                 NumberRankingPlayer3.sprite = spriteNumberWin;
+                Debug.Log("Player 3 movimentos: " + stone.stepsPlayer3);
                 break;
             case 4:
                 NumberRankingPlayer4.sprite = spriteNumberWin;
+                Debug.Log("Player 4 movimentos: " + stone.stepsPlayer4);
                 break;
         }
+
+        SceneManager.LoadScene("SceneTablero");
     }
 }

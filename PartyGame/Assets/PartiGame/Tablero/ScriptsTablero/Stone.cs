@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using NDream.AirConsole;
 
 public class Stone : MonoBehaviour
 {
@@ -12,38 +15,114 @@ public class Stone : MonoBehaviour
     public SmoothFollowCSharp mCFollowPlayer;
 
     int roundPlayer = -1;
+    int round = 0;
 
-    public int steps;
+    public int stepsPlayer1;
+    public int stepsPlayer2;
+    public int stepsPlayer3;
+    public int stepsPlayer4;
 
     bool isMoving;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+
+    }
 
     private void Update()
     {
 
         if(/*Input.GetKeyDown(KeyCode.Space) &&*/ !isMoving)
         {
-            roundPlayer++;            
-            if (roundPlayer == 4) roundPlayer = 0;
-            mCFollowPlayer.target = players[roundPlayer].transform;
-
-            steps = Random.Range(1, 7);
-            Debug.Log("Dice Rolled " + steps);
-
-            if(players[roundPlayer].routePosition+steps < currentRoute.childNodeList.Count)
+            if(round == 0)
             {
-                animatorPlayer[roundPlayer].SetBool("run", true);
-                StartCoroutine(Move());
-
-            }           
-            else
+                RandomMiniGame();
+                round++;
+            }
+            else if (SceneManager.GetActiveScene().name == "SceneTablero")
             {
-                Debug.Log("Rolled Number is to high");
-            }     
-            
+                roundPlayer++;
+                Debug.Log("Le toca moverse al jugador: " + roundPlayer);
+                if (roundPlayer >= 4) roundPlayer = -1;
+               
+                mCFollowPlayer.target = players[roundPlayer].transform;
+
+                if (roundPlayer == 0)
+                {
+                    if (stepsPlayer1 != 0)
+                    {
+                        if (players[roundPlayer].routePosition + stepsPlayer1 < currentRoute.childNodeList.Count)
+                        {
+                            animatorPlayer[roundPlayer].SetBool("run", true);
+                            StartCoroutine(Move(stepsPlayer1));
+
+                        }
+                        else
+                        {
+                            Debug.Log("Rolled Number is to high");
+                        }
+                        stepsPlayer1 = 0;
+                    }
+                }
+                else if (roundPlayer == 1)
+                {
+                    if (stepsPlayer2 != 0)
+                    {
+                        if (players[roundPlayer].routePosition + stepsPlayer2 < currentRoute.childNodeList.Count)
+                        {
+                            animatorPlayer[roundPlayer].SetBool("run", true);
+                            StartCoroutine(Move(stepsPlayer2));
+
+                        }
+                        else
+                        {
+                            Debug.Log("Rolled Number is to high");
+                        }
+                        stepsPlayer2 = 0;
+                    }
+                }
+                else if (roundPlayer == 2)
+                {
+                    if (stepsPlayer3 != 0)
+                    {
+                        if (players[roundPlayer].routePosition + stepsPlayer3 < currentRoute.childNodeList.Count)
+                        {
+                            animatorPlayer[roundPlayer].SetBool("run", true);
+                            StartCoroutine(Move(stepsPlayer3));
+
+                        }
+                        else
+                        {
+                            Debug.Log("Rolled Number is to high");
+                        }
+                        stepsPlayer3 = 0;
+                    }
+                }
+                else if (roundPlayer == 3)
+                {
+                    if (stepsPlayer4 != 0)
+                    {
+                        if (players[roundPlayer].routePosition + stepsPlayer4 < currentRoute.childNodeList.Count)
+                        {
+                            animatorPlayer[roundPlayer].SetBool("run", true);
+                            StartCoroutine(Move(stepsPlayer4));                         
+
+                        }
+                        else
+                        {
+                            Debug.Log("Rolled Number is to high");
+                        }
+                        stepsPlayer4 = 0;                        
+                    }
+                }
+            }
+
+
         }
     }
 
-    IEnumerator Move()
+    IEnumerator Move( int steps)
     {
         if(isMoving)
         {
@@ -71,6 +150,10 @@ public class Stone : MonoBehaviour
 
         animatorPlayer[roundPlayer].SetBool("run", false);
         isMoving = false;
+        if(roundPlayer == 3)
+        {
+            RandomMiniGame();
+        }
     }
 
     bool MoveToRotateNode(Quaternion rota)
@@ -84,5 +167,29 @@ public class Stone : MonoBehaviour
         
         return goal != (players[roundPlayer].transform.position = Vector3.MoveTowards(players[roundPlayer].transform.position, goal, 10f * Time.deltaTime));       
 
+    }
+
+    void RandomMiniGame()
+    {
+        int ranom = Random.RandomRange(0, 2);
+        switch (ranom)
+        {
+            case 0:
+                List<int> connectedDevicesJumpAndDown = AirConsole.instance.GetControllerDeviceIds();
+                foreach (int deviceID in connectedDevicesJumpAndDown)
+                {
+                    AirConsole.instance.Message(deviceID, "jumpAndDown");
+                }
+                SceneManager.LoadScene("SceneJumpAndDown");
+                break;
+            case 1:
+                List<int> connectedDevicesBasket = AirConsole.instance.GetControllerDeviceIds();
+                foreach (int deviceID in connectedDevicesBasket)
+                {
+                    AirConsole.instance.Message(deviceID, "gameBasket");
+                }
+                SceneManager.LoadScene("SceneBasket");
+                break;
+        }
     }
 }

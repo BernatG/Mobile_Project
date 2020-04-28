@@ -32,8 +32,27 @@ public class PlatformerExampleLogic : MonoBehaviour {
         timeGame.SetActive(false);
         AirConsole.instance.onMessage += OnMessage;		
 		AirConsole.instance.onReady += OnReady;		
-		AirConsole.instance.onConnect += OnConnect;		
-	}
+		AirConsole.instance.onConnect += OnConnect;
+
+        List<int> connectedDevices = AirConsole.instance.GetControllerDeviceIds();
+
+        player1.SetActive(true);
+        canvasPlayer1.SetActive(true);
+        players.Add(connectedDevices[0], player1.GetComponent<Player_Platformer>());
+
+        player2.SetActive(true);
+        canvasPlayer2.SetActive(true);
+        players.Add(connectedDevices[1], player2.GetComponent<Player_Platformer>());
+
+        player3.SetActive(true);
+        canvasPlayer3.SetActive(true);
+        players.Add(connectedDevices[2], player3.GetComponent<Player_Platformer>());
+
+        player4.SetActive(true);
+        canvasPlayer4.SetActive(true);
+        players.Add(connectedDevices[3], player4.GetComponent<Player_Platformer>());
+        timeGame.SetActive(true);
+    }
 
 	void OnReady(string code){
 		//Since people might be coming to the game from the AirConsole store once the game is live, 

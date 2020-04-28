@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
         switch (input)
         {
             case "start":
-                Debug.Log("Hola como estas");
                 ready = true;
                 break;
         }

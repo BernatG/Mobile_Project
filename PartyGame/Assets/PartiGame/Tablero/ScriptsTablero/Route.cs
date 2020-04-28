@@ -7,6 +7,17 @@ public class Route : MonoBehaviour
     Transform[] childObjects;
     public List<Transform> childNodeList = new List<Transform>();
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
