@@ -220,7 +220,7 @@ public class RankingGameSwiming : MonoBehaviour
 
     IEnumerator ExampleCoroutine()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(5);
 
         List<int> connectedDevicesJumpAndDown = AirConsole.instance.GetControllerDeviceIds();
         foreach (int deviceID in connectedDevicesJumpAndDown)

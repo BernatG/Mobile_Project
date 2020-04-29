@@ -12,6 +12,8 @@ public class TableroLogic : MonoBehaviour {
 	private GameObject player4;
     public GameObject logicStartGame;
 
+    bool start = true;
+
 
 	public Dictionary<int, Player> players = new Dictionary<int, Player> ();
     int idPlayer = 0;
@@ -51,13 +53,8 @@ public class TableroLogic : MonoBehaviour {
             players.Add(connectedDevices[2], player3.GetComponent<Player>());
             player4.SetActive(true);
             players.Add(connectedDevices[3], player4.GetComponent<Player>());
-
-            foreach (int ids in connectedDevices)
-            {
-                AirConsole.instance.Message(ids, "tableroReady");
-            }
-            logicStartGame.SetActive(true);
         }
+
 
     }
 

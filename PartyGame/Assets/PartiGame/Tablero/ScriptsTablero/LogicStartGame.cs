@@ -16,7 +16,18 @@ public class LogicStartGame : MonoBehaviour
     public Image imagePlayer3;
     public Image imagePlayer4;
 
-    public GameObject stone; 
+    public GameObject stone;
+
+    //void Awake()
+    //{
+
+    //    DontDestroyOnLoad(this.gameObject);
+
+    //    if (FindObjectsOfType(GetType()).Length > 1)
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +66,7 @@ public class LogicStartGame : MonoBehaviour
             }
             gameObject.SetActive(false);
             stone.SetActive(true);
+            Destroy(gameObject);
         }
     }
 }

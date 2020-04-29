@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/PartiGame/MainMenu/Scene/MainMenu.unity
+    guid: bda86f274c732ab42858ec39c04fe572
+  - enabled: 0
     path: Assets/PartiGame/Tablero/SceneTablero.unity
     guid: d7d8121f3a5bd6c45b3de5f16fe1ce07
-  - enabled: 1
+  - enabled: 0
     path: Assets/PartiGame/MiniGames/Game_Basket/Scene/SceneBasket.unity
     guid: f8d23ecabaa135f4cb12fb0061cca2f3
-  - enabled: 1
+  - enabled: 0
     path: Assets/PartiGame/MiniGames/Game_Jump&Down/SceneJumpAndDown.unity
     guid: 97227563214d0294f910c29b804515ae
+  - enabled: 0
+    path: Assets/PartiGame/MiniGames/SwimGame/Scene/SceneSwiming.unity
+    guid: 1f891810279f3b241ae33c83a09359c4
   m_configObjects: {}
