@@ -1,0 +1,367 @@
+fileFormatVersion: 2
+guid: 5c9df53827d4a8045abb95cd1ef489eb
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: group
+    100004: Group005
+    100006: head
+    100008: head 1
+    100010: ikHandle5
+    100012: ikHandle6
+    100014: joint1
+    100016: joint10
+    100018: joint11
+    100020: joint11 1
+    100022: joint12
+    100024: joint12 1
+    100026: joint13
+    100028: joint13 1
+    100030: joint14
+    100032: joint15
+    100034: joint15 1
+    100036: joint16
+    100038: joint16 1
+    100040: joint17
+    100042: joint17 1
+    100044: joint19
+    100046: joint2
+    100048: joint2 1
+    100050: joint20
+    100052: joint20 1
+    100054: joint21
+    100056: joint21 1
+    100058: joint25
+    100060: joint3
+    100062: joint3 1
+    100064: joint30
+    100066: joint35
+    100068: joint4
+    100070: joint4 1
+    100072: joint40
+    100074: joint45
+    100076: joint46
+    100078: joint48
+    100080: joint48 1
+    100082: joint5
+    100084: joint50
+    100086: joint50 1
+    100088: joint56
+    100090: joint6
+    100092: joint6 1
+    100094: joint7
+    100096: joint7 1
+    100098: joint8
+    100100: joint8 1
+    100102: leftarm
+    100104: leftelbow
+    100106: leftpie
+    100108: leftrodilla
+    100110: nurbsCircle1
+    100112: nurbsCircle10
+    100114: nurbsCircle2
+    100116: nurbsCircle5
+    100118: nurbsCircle7
+    100120: nurbsCircle8
+    100122: nurbsCircle9
+    100124: Object023
+    100126: Object024
+    100128: pasted__nurbsCircle10
+    100130: pasted__nurbsCircle10 1
+    100132: pasted__nurbsCircle2
+    100134: pasted__nurbsCircle4
+    100136: pasted__nurbsCircle7
+    100138: pasted__pasted__nurbsCircle10
+    100140: pasted__pasted__nurbsCircle10 1
+    100142: pasted__pasted__pasted__nurbsCircle10
+    100144: pelo
+    100146: Pelvis
+    100148: QuickRigCharacter_LeftForeArm
+    100150: QuickRigCharacter_LeftHand
+    100152: QuickRigCharacter_Neck
+    100154: QuickRigCharacter_RightForeArm
+    100156: QuickRigCharacter_RightHand
+    100158: QuickRigCharacter_Spine1
+    100160: QuickRigCharacter_Spine2
+    100162: rightarm
+    100164: rightelbow
+    100166: rightpie
+    100168: rightrodilla
+    100170: spine
+    400000: //RootNode
+    400002: group
+    400004: Group005
+    400006: head
+    400008: head 1
+    400010: ikHandle5
+    400012: ikHandle6
+    400014: joint1
+    400016: joint10
+    400018: joint11
+    400020: joint11 1
+    400022: joint12
+    400024: joint12 1
+    400026: joint13
+    400028: joint13 1
+    400030: joint14
+    400032: joint15
+    400034: joint15 1
+    400036: joint16
+    400038: joint16 1
+    400040: joint17
+    400042: joint17 1
+    400044: joint19
+    400046: joint2
+    400048: joint2 1
+    400050: joint20
+    400052: joint20 1
+    400054: joint21
+    400056: joint21 1
+    400058: joint25
+    400060: joint3
+    400062: joint3 1
+    400064: joint30
+    400066: joint35
+    400068: joint4
+    400070: joint4 1
+    400072: joint40
+    400074: joint45
+    400076: joint46
+    400078: joint48
+    400080: joint48 1
+    400082: joint5
+    400084: joint50
+    400086: joint50 1
+    400088: joint56
+    400090: joint6
+    400092: joint6 1
+    400094: joint7
+    400096: joint7 1
+    400098: joint8
+    400100: joint8 1
+    400102: leftarm
+    400104: leftelbow
+    400106: leftpie
+    400108: leftrodilla
+    400110: nurbsCircle1
+    400112: nurbsCircle10
+    400114: nurbsCircle2
+    400116: nurbsCircle5
+    400118: nurbsCircle7
+    400120: nurbsCircle8
+    400122: nurbsCircle9
+    400124: Object023
+    400126: Object024
+    400128: pasted__nurbsCircle10
+    400130: pasted__nurbsCircle10 1
+    400132: pasted__nurbsCircle2
+    400134: pasted__nurbsCircle4
+    400136: pasted__nurbsCircle7
+    400138: pasted__pasted__nurbsCircle10
+    400140: pasted__pasted__nurbsCircle10 1
+    400142: pasted__pasted__pasted__nurbsCircle10
+    400144: pelo
+    400146: Pelvis
+    400148: QuickRigCharacter_LeftForeArm
+    400150: QuickRigCharacter_LeftHand
+    400152: QuickRigCharacter_Neck
+    400154: QuickRigCharacter_RightForeArm
+    400156: QuickRigCharacter_RightHand
+    400158: QuickRigCharacter_Spine1
+    400160: QuickRigCharacter_Spine2
+    400162: rightarm
+    400164: rightelbow
+    400166: rightpie
+    400168: rightrodilla
+    400170: spine
+    2100000: 08 - Default2
+    2100002: 21 - Default1
+    2100004: 07 - Default1
+    2100006: 14 - Default2
+    2100008: 09 - Default2
+    2100010: 13 - Default2
+    2100012: 19 - Default2
+    2100014: Material.002
+    4300000: Object024
+    4300002: Object023
+    4300004: head
+    4300006: pelo
+    7400000: idle
+    7400002: correrCesta
+    7400004: correr
+    9500000: //RootNode
+    13700000: head
+    13700002: Object023
+    13700004: Object024
+    13700006: pelo
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: correrCesta
+      takeName: Take 001
+      firstFrame: 64
+      lastFrame: 94
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: correr
+      takeName: Take 001
+      firstFrame: 160
+      lastFrame: 189
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1.243
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.02
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
