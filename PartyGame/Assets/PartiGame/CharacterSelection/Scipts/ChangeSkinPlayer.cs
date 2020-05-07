@@ -16,47 +16,51 @@ public class ChangeSkinPlayer : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ButtonInput(string input)
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        Debug.Log("Mensage recivido:" + input);
+        switch (input)
         {
-            intPersonaje++;
-            if (personajes.Count <= intPersonaje) intPersonaje = 0;
-
-            Destroy(personajeVisual);
-            personajeVisual = Instantiate(personajes[intPersonaje], transform);
+            case "up":
+                intPersonaje++;
+                break;
+            case "down":
+                intPersonaje--;
+                break;
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            intPersonaje--;
-            if (-1 >= intPersonaje) intPersonaje = personajes.Count - 1;
-
-            Destroy(personajeVisual);
-            personajeVisual = Instantiate(personajes[intPersonaje], transform);
-
-        }
     }
 
+    private void FixedUpdate()
+    {
+        if (personajes.Count <= intPersonaje) intPersonaje = 0;
+        if (-1 >= intPersonaje) intPersonaje = personajes.Count - 1;
 
-    //void ChangePersonaje(int personaje)
+        Destroy(personajeVisual);
+        personajeVisual = Instantiate(personajes[intPersonaje], transform);
+
+    }
+
+    // Update is called once per frame
+    //void Update()
     //{
-    //    Debug.Log("Personaje: " + personaje);
-    //    switch (personaje)
+    //    if (Input.GetKeyDown(KeyCode.UpArrow))
     //    {
-    //        case 0:
-    //            Instantiate(personajes[personaje], new Vector3(0, 0, 0), Quaternion.identity);
-    //            break;
-    //        case 1:
-    //            Instantiate(personajes[personaje], new Vector3(0, 0, 0), Quaternion.identity);
-    //            break;
-    //        case 2:
-    //            Instantiate(personajes[personaje], new Vector3(0, 0, 0), Quaternion.identity);
-    //            break;
-    //        case 3:
-    //            Instantiate(personajes[personaje], new Vector3(0, 0, 0), Quaternion.identity);
-    //            break;
+    //        intPersonaje++;
+    //        if (personajes.Count <= intPersonaje) intPersonaje = 0;
+
+    //        Destroy(personajeVisual);
+    //        personajeVisual = Instantiate(personajes[intPersonaje], transform);
+    //    }
+
+    //    if (Input.GetKeyDown(KeyCode.DownArrow))
+    //    {
+    //        intPersonaje--;
+    //        if (-1 >= intPersonaje) intPersonaje = personajes.Count - 1;
+
+    //        Destroy(personajeVisual);
+    //        personajeVisual = Instantiate(personajes[intPersonaje], transform);
+
     //    }
     //}
 }
