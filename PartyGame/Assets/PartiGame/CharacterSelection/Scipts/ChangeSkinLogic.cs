@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NDream.AirConsole;
 using Newtonsoft.Json.Linq;
+using TMPro;
 
 public class ChangeSkinLogic : MonoBehaviour {
 
@@ -11,7 +12,17 @@ public class ChangeSkinLogic : MonoBehaviour {
 	private GameObject player3;
 	private GameObject player4;
 
-	public Dictionary<int, ChangeSkinPlayer> players = new Dictionary<int, ChangeSkinPlayer> ();
+    private GameObject canvasPlayer1;
+    private GameObject canvasPlayer2;
+    private GameObject canvasPlayer3;
+    private GameObject canvasPlayer4;
+
+    public TextMeshProUGUI textNamePlayer1;
+    public TextMeshProUGUI textNamePlayer2;
+    public TextMeshProUGUI textNamePlayer3;
+    public TextMeshProUGUI textNamePlayer4;
+
+    public Dictionary<int, ChangeSkinPlayer> players = new Dictionary<int, ChangeSkinPlayer> ();
     int idPlayer = 0;
 
 	void Awake () {
@@ -23,12 +34,22 @@ public class ChangeSkinLogic : MonoBehaviour {
         player3 = GameObject.Find("Player3");
         player4 = GameObject.Find("Player4");
 
+        canvasPlayer1 = GameObject.Find("CanvasPlayer1");
+        canvasPlayer2 = GameObject.Find("CanvasPlayer2");
+        canvasPlayer3 = GameObject.Find("CanvasPlayer3");
+        canvasPlayer4 = GameObject.Find("CanvasPlayer4");
+
         player1.SetActive(false);
         player2.SetActive(false);
         player3.SetActive(false);
         player4.SetActive(false);
-        
-		AirConsole.instance.onMessage += OnMessage;		
+
+        canvasPlayer1.SetActive(false);
+        canvasPlayer2.SetActive(false);
+        canvasPlayer3.SetActive(false);
+        canvasPlayer4.SetActive(false);
+
+        AirConsole.instance.onMessage += OnMessage;		
 		AirConsole.instance.onReady += OnReady;		
 		AirConsole.instance.onConnect += OnConnect;
     }
@@ -37,10 +58,10 @@ public class ChangeSkinLogic : MonoBehaviour {
 		//Since people might be coming to the game from the AirConsole store once the game is live, 
 		//I have to check for already connected devices here and cannot rely only on the OnConnect event 
 		List<int> connectedDevices = AirConsole.instance.GetControllerDeviceIds();
-        
-		foreach (int deviceID in connectedDevices) {
+
+        foreach (int deviceID in connectedDevices) {
 			AddNewPlayer (deviceID);
-		}
+        }
 	}
 
 	void OnConnect (int device){
@@ -63,24 +84,34 @@ public class ChangeSkinLogic : MonoBehaviour {
         if (idPlayer == 1)
         {
             player1.SetActive(true);
+            canvasPlayer1.SetActive(true);
             players.Add(deviceID, player1.GetComponent<ChangeSkinPlayer>());
+
+            NickName(deviceID, textNamePlayer1);          
         }
         else if(idPlayer == 2)
         {
             player2.SetActive(true);
+            canvasPlayer2.SetActive(true);
             players.Add(deviceID, player2.GetComponent<ChangeSkinPlayer>());
 
+            NickName(deviceID, textNamePlayer2);
         }
         else if (idPlayer == 3)
         {
             player3.SetActive(true);
+            canvasPlayer3.SetActive(true);
             players.Add(deviceID, player3.GetComponent<ChangeSkinPlayer>());
 
+            NickName(deviceID, textNamePlayer3);
         }
         else if (idPlayer == 4)
         {
             player4.SetActive(true);
+            canvasPlayer4.SetActive(true);
             players.Add(deviceID, player4.GetComponent<ChangeSkinPlayer>());
+
+           NickName(deviceID, textNamePlayer4);
         }
 
     }
@@ -102,4 +133,13 @@ public class ChangeSkinLogic : MonoBehaviour {
 			AirConsole.instance.onConnect -= OnConnect;		
 		}
 	}
+
+    void NickName(int deviceID, TextMeshProUGUI textNamePlayer)
+    {
+
+        players[deviceID].nickName = AirConsole.instance.GetNickname(deviceID);
+        textNamePlayer.text = players[deviceID].nickName;
+        Debug.Log("Player Name" + players[deviceID].nickName);
+
+    }
 }
