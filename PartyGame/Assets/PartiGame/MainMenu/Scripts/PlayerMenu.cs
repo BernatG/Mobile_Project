@@ -9,6 +9,7 @@ public class PlayerMenu : MonoBehaviour
 {
     private bool playTablero;
     private bool exit;
+    public LevelLoader levelLoader;
 
     public void ButtonInput(string input)
     {
@@ -38,9 +39,9 @@ public class PlayerMenu : MonoBehaviour
             List<int> connectedDevicesSwiming = AirConsole.instance.GetControllerDeviceIds();
             foreach (int deviceID in connectedDevicesSwiming)
             {
-                AirConsole.instance.Message(deviceID, "tablero");
+                AirConsole.instance.Message(deviceID, "tableroReady");
             }
-            SceneManager.LoadScene("SceneTablero");
+            levelLoader.OnMovieEnded(1);
         }
 
         if(exit)

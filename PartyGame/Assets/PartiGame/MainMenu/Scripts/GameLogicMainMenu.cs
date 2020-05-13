@@ -7,9 +7,7 @@ using Newtonsoft.Json.Linq;
 public class GameLogicMainMenu : MonoBehaviour
 {
     public GameObject player1;
-    public GameObject player2;
-    public GameObject player3;
-    public GameObject player4;
+
 
     public Dictionary<int, PlayerMenu> players = new Dictionary<int, PlayerMenu>();
     int idPlayer = 0;
@@ -20,6 +18,13 @@ public class GameLogicMainMenu : MonoBehaviour
         AirConsole.instance.onMessage += OnMessage;
         AirConsole.instance.onReady += OnReady;
         AirConsole.instance.onConnect += OnConnect;
+
+        List<int> connectedDevices = AirConsole.instance.GetControllerDeviceIds();
+        if (connectedDevices != null)
+        {
+            player1.SetActive(true);
+            players.Add(connectedDevices[0], player1.GetComponent<PlayerMenu>());
+        }
     }
 
     void OnReady(string code)
@@ -50,29 +55,6 @@ public class GameLogicMainMenu : MonoBehaviour
         }
 
         idPlayer += 1;
-
-        if (idPlayer == 1)
-        {
-            player1.SetActive(true);
-            players.Add(deviceID, player1.GetComponent<PlayerMenu>());
-        }
-        else if (idPlayer == 2)
-        {
-            player2.SetActive(true);
-            players.Add(deviceID, player2.GetComponent<PlayerMenu>());
-
-        }
-        else if (idPlayer == 3)
-        {
-            player3.SetActive(true);
-            players.Add(deviceID, player3.GetComponent<PlayerMenu>());
-
-        }
-        else if (idPlayer == 4)
-        {
-            player4.SetActive(true);
-            players.Add(deviceID, player4.GetComponent<PlayerMenu>());
-        }
     }
 
     void OnMessage(int from, JToken data)

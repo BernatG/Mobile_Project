@@ -6,11 +6,12 @@ using TMPro;
 
 public class ChangeSkinPlayer : MonoBehaviour
 {
+
     public List<GameObject> personajes;
     int intPersonaje;
-    private GameObject personajeVisual;
+    public GameObject personajeVisual;
     public string nickName;
-    private bool ready;
+    public bool ready;
 
     public Image imageReady;
 

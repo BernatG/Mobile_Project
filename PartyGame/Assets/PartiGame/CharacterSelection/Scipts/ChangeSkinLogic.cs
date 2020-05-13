@@ -29,10 +29,10 @@ public class ChangeSkinLogic : MonoBehaviour {
 
         DontDestroyOnLoad(this.gameObject);
         
-        player1 = GameObject.Find("Player1");
-        player2 = GameObject.Find("Player2");
-        player3 = GameObject.Find("Player3");
-        player4 = GameObject.Find("Player4");
+        player1 = GameObject.Find("Player1Skin");
+        player2 = GameObject.Find("Player2Skin");
+        player3 = GameObject.Find("Player3Skin");
+        player4 = GameObject.Find("Player4Skin");
 
         canvasPlayer1 = GameObject.Find("CanvasPlayer1");
         canvasPlayer2 = GameObject.Find("CanvasPlayer2");

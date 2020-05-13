@@ -164,6 +164,17 @@
             jumpAndDown.style.display = "none";
             swiming.style.display = "none";
 		  }
+		  else if (data === "mainMenu")
+		  {
+		    me.airconsole = new AirConsole({"orientation": "portrait", "synchronize_time" : "true"});		    
+		    mainMenu.style.display = "block";
+			changeSkin.style.display = "none";
+			tablero.style.display = "none";
+			tableroReady.style.display = "none";
+			basket.style.display = "none";
+            jumpAndDown.style.display = "none";
+            swiming.style.display = "none";
+		  }
 		  else if(data === "changeSkin")
 		  {
 			me.airconsole = new AirConsole({"orientation": "portrait", "synchronize_time" : "true"});
