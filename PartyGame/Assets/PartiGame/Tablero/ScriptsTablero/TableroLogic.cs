@@ -12,6 +12,8 @@ public class TableroLogic : MonoBehaviour {
 	private GameObject player4;
     public GameObject logicStartGame;
 
+    bool inital = true;
+
     bool start = true;
 
 
@@ -53,7 +55,12 @@ public class TableroLogic : MonoBehaviour {
             players.Add(connectedDevices[2], player3.GetComponent<Player>());
             player4.SetActive(true);
             players.Add(connectedDevices[3], player4.GetComponent<Player>());
-            logicStartGame.SetActive(true);
+
+            if (inital)
+            {
+                logicStartGame.SetActive(true);
+                inital = false;
+            }
         }
 
 

@@ -7,7 +7,7 @@ public class PlayerController_JumpAndDown : MonoBehaviour
     Clock clock;
     private Rigidbody rb;
     private BoxCollider bc;
-    private Animator animatorPlayer; 
+    public Animator animatorPlayer; 
     bool cubeIsOnGround;
     public bool kill;    
 
@@ -16,15 +16,42 @@ public class PlayerController_JumpAndDown : MonoBehaviour
 
     public int points;
 
+    private ChangeSkinPlayer skin;
+
+    private void Awake()
+    {
+        if (gameObject.name == "Player1")
+        {
+            skin = GameObject.Find("Player1Skin").GetComponent<ChangeSkinPlayer>();
+            Instantiate(skin.personajeVisual, transform);
+        }
+        else if (gameObject.name == "Player2")
+        {
+            skin = GameObject.Find("Player2Skin").GetComponent<ChangeSkinPlayer>();
+            Instantiate(skin.personajeVisual, transform);
+        }
+        else if (gameObject.name == "Player3")
+        {
+            skin = GameObject.Find("Player3Skin").GetComponent<ChangeSkinPlayer>();
+            Instantiate(skin.personajeVisual, transform);
+        }
+        else if (gameObject.name == "Player4")
+        {
+            skin = GameObject.Find("Player4Skin").GetComponent<ChangeSkinPlayer>();
+            Instantiate(skin.personajeVisual, transform);
+        }
+    }
+
     void Start()
     {
         clock = new Clock();
         bc = GetComponent<BoxCollider>();
         rb = GetComponent<Rigidbody>();
-        animatorPlayer = GetComponent<Animator>(); 
+        animatorPlayer = gameObject.GetComponentInChildren<Animator>();
         points = 0;
         kill = false;
     }
+
     public void ButtonInput(string input)
     {
         switch (input)

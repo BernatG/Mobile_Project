@@ -5591,7 +5591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personajes:
-  - {fileID: 3775600683091017940, guid: d720e71e5ca9a0e4aadfc0be888b314e, type: 3}
+  - {fileID: 232729755563713090, guid: 3c0d20bd88d183d4ab3b353c43ee14c4, type: 3}
   - {fileID: 4860223019338075963, guid: 726cf1116261f9a49a0bbf973202ac5e, type: 3}
   - {fileID: 1236188415682547956, guid: 93a0b0a0340cbcc458612057a8cb4aec, type: 3}
   - {fileID: 7346666883394119376, guid: f52fa56cd78133548a58d66b81b36141, type: 3}
@@ -6459,7 +6459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personajes:
-  - {fileID: 3775600683091017940, guid: d720e71e5ca9a0e4aadfc0be888b314e, type: 3}
+  - {fileID: 232729755563713090, guid: 3c0d20bd88d183d4ab3b353c43ee14c4, type: 3}
   - {fileID: 4860223019338075963, guid: 726cf1116261f9a49a0bbf973202ac5e, type: 3}
   - {fileID: 1236188415682547956, guid: 93a0b0a0340cbcc458612057a8cb4aec, type: 3}
   - {fileID: 7346666883394119376, guid: f52fa56cd78133548a58d66b81b36141, type: 3}
@@ -21415,7 +21415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personajes:
-  - {fileID: 3775600683091017940, guid: d720e71e5ca9a0e4aadfc0be888b314e, type: 3}
+  - {fileID: 232729755563713090, guid: 3c0d20bd88d183d4ab3b353c43ee14c4, type: 3}
   - {fileID: 4860223019338075963, guid: 726cf1116261f9a49a0bbf973202ac5e, type: 3}
   - {fileID: 1236188415682547956, guid: 93a0b0a0340cbcc458612057a8cb4aec, type: 3}
   - {fileID: 7346666883394119376, guid: f52fa56cd78133548a58d66b81b36141, type: 3}
@@ -45558,7 +45558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personajes:
-  - {fileID: 3775600683091017940, guid: d720e71e5ca9a0e4aadfc0be888b314e, type: 3}
+  - {fileID: 232729755563713090, guid: 3c0d20bd88d183d4ab3b353c43ee14c4, type: 3}
   - {fileID: 4860223019338075963, guid: 726cf1116261f9a49a0bbf973202ac5e, type: 3}
   - {fileID: 1236188415682547956, guid: 93a0b0a0340cbcc458612057a8cb4aec, type: 3}
   - {fileID: 7346666883394119376, guid: f52fa56cd78133548a58d66b81b36141, type: 3}

@@ -30,6 +30,26 @@ public class Stone : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
 
+        for (int i = 0; i < players.Count; i++ )
+        {
+            if (i == 0)
+            {
+                animatorPlayer[i] = GameObject.Find("Player1").GetComponentInChildren<Animator>();
+            }
+            if (i == 1)
+            {
+                animatorPlayer[i] = GameObject.Find("Player2").GetComponentInChildren<Animator>();
+            }
+            if (i == 2)
+            {
+                animatorPlayer[i] = GameObject.Find("Player3").GetComponentInChildren<Animator>();
+            }
+            if (i == 3)
+            {
+                animatorPlayer[i] = GameObject.Find("Player4").GetComponentInChildren<Animator>();
+            }
+        }
+
     }
 
     private void Update()
@@ -164,7 +184,8 @@ public class Stone : MonoBehaviour
         yield return new WaitForSeconds(1);
         waitSecond = false;
 
-        int random = Random.RandomRange(0, 3);
+        //int random = Random.RandomRange(0, 3);
+        int random = 1;
         switch (random)
         {
             case 0:
