@@ -15,6 +15,8 @@ public class TimeGame : MonoBehaviour
     public AudioSource musicAmbient;
     public GameObject startGameGo;
     public TextMeshProUGUI textStartGame;
+    public AudioClip clipCountDown;
+    public AudioSource audioCountDown;
 
     //public GameObject timeGameGo;
     public TextMeshProUGUI textTimeGame;
@@ -28,7 +30,7 @@ public class TimeGame : MonoBehaviour
         clock = new Clock();
         startGame = true;        
 
-        time = 5;
+        time = 5;       
         textStartGame.text = time.ToString();
         startGameGo.SetActive(true);
 
@@ -41,6 +43,10 @@ public class TimeGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (time == 4)
+        {
+            audioCountDown.Play();
+        }
         if (startGame)
         {
             musicAmbient.Play();

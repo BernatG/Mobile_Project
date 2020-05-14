@@ -12,6 +12,8 @@ public class TimeGame_JumpAndDown : MonoBehaviour
     public GameObject startGameGo;
     public TextMeshProUGUI textStartGame;
     public CylinderController cylinderController;
+    public AudioClip clipCountDown;
+    public AudioSource audioCountDown;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,11 @@ public class TimeGame_JumpAndDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(startGame)
+        if (time == 4)
+        {
+            audioCountDown.Play();
+        }
+        if (startGame)
         {
             if (clock.getTime() >= 1f)
             {

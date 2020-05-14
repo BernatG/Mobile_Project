@@ -21,7 +21,8 @@ public class TimeGameSwiming : MonoBehaviour
     public PlayerSwiming player2;
     public PlayerSwiming player3;
     public PlayerSwiming player4;
-
+    public AudioClip clipCountDown;
+    public AudioSource audioCountDown;
     public GameObject timerPanel;
 
     // Start is called before the first frame update
@@ -41,6 +42,10 @@ public class TimeGameSwiming : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (time == 4)
+        {
+            audioCountDown.Play();
+        }
         if (startGame)
         {
             if (clock.getTime() >= 1f)

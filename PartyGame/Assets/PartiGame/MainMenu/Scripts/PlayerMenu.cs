@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using NDream.AirConsole;
 
@@ -10,6 +11,8 @@ public class PlayerMenu : MonoBehaviour
     private bool playTablero;
     private bool exit;
     public LevelLoader levelLoader;
+    public AudioClip audioPlayButton;
+    public AudioSource audioEffectClick;
 
     public void ButtonInput(string input)
     {
@@ -17,7 +20,8 @@ public class PlayerMenu : MonoBehaviour
         switch (input)
         {
             case "playTablero":
-                playTablero = true;
+                audioEffectClick.Play();
+                playTablero = true;                
                 break;
             case "exit":
                 exit = true;
