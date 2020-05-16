@@ -29,6 +29,7 @@ public class ReadyPlayers : MonoBehaviour
     {
         if (Player1.ready && Player2.ready && Player3.ready && Player4.ready && SceneManager.GetActiveScene().buildIndex == 0)
         {
+            
             List<int> connectedDevices = AirConsole.instance.GetControllerDeviceIds();
             AirConsole.instance.Message(connectedDevices[0], "mainMenu");
 

@@ -18,28 +18,35 @@ public class PlayerController_JumpAndDown : MonoBehaviour
 
     private ChangeSkinPlayer skin;
 
+    private Vector3 scalePersonaje;
+    private GameObject playerVisual;
+
     private void Awake()
     {
+        scalePersonaje = new Vector3(1f, 1f, 1f);
+
         if (gameObject.name == "Player1")
         {
             skin = GameObject.Find("Player1Skin").GetComponent<ChangeSkinPlayer>();
-            Instantiate(skin.personajeVisual, transform);
+            playerVisual = Instantiate(skin.personajeVisual, transform);
         }
         else if (gameObject.name == "Player2")
         {
             skin = GameObject.Find("Player2Skin").GetComponent<ChangeSkinPlayer>();
-            Instantiate(skin.personajeVisual, transform);
+            playerVisual = Instantiate(skin.personajeVisual, transform);
         }
         else if (gameObject.name == "Player3")
         {
             skin = GameObject.Find("Player3Skin").GetComponent<ChangeSkinPlayer>();
-            Instantiate(skin.personajeVisual, transform);
+            playerVisual = Instantiate(skin.personajeVisual, transform);
         }
         else if (gameObject.name == "Player4")
         {
             skin = GameObject.Find("Player4Skin").GetComponent<ChangeSkinPlayer>();
-            Instantiate(skin.personajeVisual, transform);
+            playerVisual = Instantiate(skin.personajeVisual, transform);
         }
+        playerVisual.transform.localScale = scalePersonaje;
+
     }
 
     void Start()

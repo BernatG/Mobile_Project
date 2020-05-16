@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ChangeSkinPlayer : MonoBehaviour
 {
@@ -15,12 +16,18 @@ public class ChangeSkinPlayer : MonoBehaviour
 
     public Image imageReady;
 
+    private Vector3 scaleChange;
+    private Transform personaje;
+
     // Start is called before the first frame update
     void Start()
     {       
         intPersonaje = 0;
+        scaleChange = new Vector3(1.243f, 1.243f, 1.243f);
         Destroy(personajeVisual);
+
         personajeVisual = Instantiate(personajes[intPersonaje], transform);
+        personajeVisual.transform.localScale = scaleChange;
         ready = false;
     }
 
@@ -50,11 +57,15 @@ public class ChangeSkinPlayer : MonoBehaviour
         if (personajes.Count <= intPersonaje) intPersonaje = 0;
         if (-1 >= intPersonaje) intPersonaje = personajes.Count - 1;
 
-        if (ready) imageReady.color = Color.green;
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            if (ready) imageReady.color = Color.green;
+        }
 
         Destroy(personajeVisual);
         personajeVisual = Instantiate(personajes[intPersonaje], transform);
 
+        personajeVisual.transform.localScale = scaleChange;        
     }
 
     // Update is called once per frame

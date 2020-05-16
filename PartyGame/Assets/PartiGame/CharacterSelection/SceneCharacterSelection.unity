@@ -5591,10 +5591,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personajes:
-  - {fileID: 232729755563713090, guid: 3c0d20bd88d183d4ab3b353c43ee14c4, type: 3}
-  - {fileID: 4860223019338075963, guid: 726cf1116261f9a49a0bbf973202ac5e, type: 3}
-  - {fileID: 1236188415682547956, guid: 93a0b0a0340cbcc458612057a8cb4aec, type: 3}
-  - {fileID: 7346666883394119376, guid: f52fa56cd78133548a58d66b81b36141, type: 3}
+  - {fileID: 232729755563713090, guid: a103ccd50210b5243be8250d26cc57b1, type: 3}
+  - {fileID: 788250789897786883, guid: f4410adfa7ccce042813b1401d909cb3, type: 3}
+  - {fileID: 3395004770765198966, guid: 7bcb131946d207749b22eeef1fca96b4, type: 3}
   personajeVisual: {fileID: 0}
   nickName: 
   ready: 0
@@ -6459,10 +6458,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personajes:
-  - {fileID: 232729755563713090, guid: 3c0d20bd88d183d4ab3b353c43ee14c4, type: 3}
-  - {fileID: 4860223019338075963, guid: 726cf1116261f9a49a0bbf973202ac5e, type: 3}
-  - {fileID: 1236188415682547956, guid: 93a0b0a0340cbcc458612057a8cb4aec, type: 3}
-  - {fileID: 7346666883394119376, guid: f52fa56cd78133548a58d66b81b36141, type: 3}
+  - {fileID: 232729755563713090, guid: fd82d9d03f582134d9142d6a9569cfd3, type: 3}
+  - {fileID: 788250789897786883, guid: 42f45138b839a174aba6d6d7f6c77919, type: 3}
+  - {fileID: 3395004770765198966, guid: d437785a4af80a44f945b235a584e2af, type: 3}
   personajeVisual: {fileID: 0}
   nickName: 
   ready: 0
@@ -14119,6 +14117,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 40113223151327707, guid: 5f8636dbc16596747affce0d6ea4f154,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7075491165443329684, guid: 5f8636dbc16596747affce0d6ea4f154,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21415,10 +21418,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personajes:
-  - {fileID: 232729755563713090, guid: 3c0d20bd88d183d4ab3b353c43ee14c4, type: 3}
-  - {fileID: 4860223019338075963, guid: 726cf1116261f9a49a0bbf973202ac5e, type: 3}
-  - {fileID: 1236188415682547956, guid: 93a0b0a0340cbcc458612057a8cb4aec, type: 3}
-  - {fileID: 7346666883394119376, guid: f52fa56cd78133548a58d66b81b36141, type: 3}
+  - {fileID: 232729755563713090, guid: 5d8bbf4ecacbbe74d90761783db4a9c2, type: 3}
+  - {fileID: 788250789897786883, guid: e6208ce0614ac4445b375e108711e05a, type: 3}
+  - {fileID: 3395004770765198966, guid: 4c145a1cad7d49e4db3b82c7c2ac8009, type: 3}
   personajeVisual: {fileID: 0}
   nickName: 
   ready: 0
@@ -35433,6 +35435,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670167202}
   m_Mesh: {fileID: 4300034, guid: 768373f680dab5a4ea730e688df9dd0b, type: 3}
+--- !u!1001 &1673384122
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1675735084}
+    m_Modifications:
+    - target: {fileID: 100000, guid: c49ccd23c6e3b2c43b2861a91b93257f, type: 3}
+      propertyPath: m_Name
+      value: Animations Boy full
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c49ccd23c6e3b2c43b2861a91b93257f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c49ccd23c6e3b2c43b2861a91b93257f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c49ccd23c6e3b2c43b2861a91b93257f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c49ccd23c6e3b2c43b2861a91b93257f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c49ccd23c6e3b2c43b2861a91b93257f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c49ccd23c6e3b2c43b2861a91b93257f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c49ccd23c6e3b2c43b2861a91b93257f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c49ccd23c6e3b2c43b2861a91b93257f, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c49ccd23c6e3b2c43b2861a91b93257f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c49ccd23c6e3b2c43b2861a91b93257f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c49ccd23c6e3b2c43b2861a91b93257f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c49ccd23c6e3b2c43b2861a91b93257f, type: 3}
 --- !u!1 &1675290277
 GameObject:
   m_ObjectHideFlags: 0
@@ -45559,9 +45618,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personajes:
   - {fileID: 232729755563713090, guid: 3c0d20bd88d183d4ab3b353c43ee14c4, type: 3}
-  - {fileID: 4860223019338075963, guid: 726cf1116261f9a49a0bbf973202ac5e, type: 3}
-  - {fileID: 1236188415682547956, guid: 93a0b0a0340cbcc458612057a8cb4aec, type: 3}
-  - {fileID: 7346666883394119376, guid: f52fa56cd78133548a58d66b81b36141, type: 3}
+  - {fileID: 788250789897786883, guid: d79f76a9a49c9f248b4c6f5d34ee447d, type: 3}
+  - {fileID: 3395004770765198966, guid: d92f986f636445d43a5a6f3e0b680fb2, type: 3}
   personajeVisual: {fileID: 0}
   nickName: 
   ready: 0

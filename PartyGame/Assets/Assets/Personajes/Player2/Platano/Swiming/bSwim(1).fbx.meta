@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: 3fa73f856e19da446950e21c22cc8b9c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Banana
+    100002: //RootNode
+    100004: calcetin005
+    100006: Group006
+    100008: Group007
+    100010: group1
+    100012: Mesh_rdmobj004
+    100014: Object027
+    100016: Object028
+    100018: Object029
+    100020: pasted__group
+    100022: pasted__pasted__Cabesa
+    100024: pasted__pasted__Cabesa_end
+    100026: pasted__pasted__Group005
+    100028: pasted__pasted__ikHandle1
+    100030: pasted__pasted__ikHandle2
+    100032: pasted__pasted__joint1
+    100034: pasted__pasted__joint10
+    100036: pasted__pasted__joint11
+    100038: pasted__pasted__joint11 1
+    100040: pasted__pasted__joint12
+    100042: pasted__pasted__joint12 1
+    100044: pasted__pasted__joint13
+    100046: pasted__pasted__joint13 1
+    100048: pasted__pasted__joint14
+    100050: pasted__pasted__joint15
+    100052: pasted__pasted__joint15 1
+    100054: pasted__pasted__joint16
+    100056: pasted__pasted__joint16 1
+    100058: pasted__pasted__joint17
+    100060: pasted__pasted__joint17 1
+    100062: pasted__pasted__joint19
+    100064: pasted__pasted__joint2
+    100066: pasted__pasted__joint2 1
+    100068: pasted__pasted__joint20
+    100070: pasted__pasted__joint20 1
+    100072: pasted__pasted__joint21
+    100074: pasted__pasted__joint21 1
+    100076: pasted__pasted__joint25
+    100078: pasted__pasted__joint3
+    100080: pasted__pasted__joint3 1
+    100082: pasted__pasted__joint30
+    100084: pasted__pasted__joint35
+    100086: pasted__pasted__joint4
+    100088: pasted__pasted__joint4 1
+    100090: pasted__pasted__joint40
+    100092: pasted__pasted__joint45
+    100094: pasted__pasted__joint46
+    100096: pasted__pasted__joint5
+    100098: pasted__pasted__joint50
+    100100: pasted__pasted__joint51
+    100102: pasted__pasted__joint6
+    100104: pasted__pasted__joint6 1
+    100106: pasted__pasted__joint7
+    100108: pasted__pasted__joint7 1
+    100110: pasted__pasted__joint8
+    100112: pasted__pasted__joint8 1
+    100114: pasted__pasted__nurbsCircle1
+    100116: pasted__pasted__nurbsCircle2
+    100118: pasted__pasted__nurbsCircle3
+    100120: pasted__pasted__nurbsCircle4
+    100122: pasted__pasted__nurbsCircle5
+    100124: pasted__pasted__nurbsCircle6
+    100126: pasted__pasted__pasted__nurbsCircle1
+    100128: pasted__pasted__pasted__nurbsCircle2
+    100130: pasted__pasted__pasted__nurbsCircle3
+    100132: pasted__pasted__pasted__nurbsCircle4
+    100134: pasted__pasted__pasted__nurbsCircle4 1
+    100136: pasted__pasted__pasted__nurbsCircle6
+    100138: pasted__pasted__pasted__pasted__nurbsCircle1
+    100140: pasted__pasted__pasted__pasted__nurbsCircle5
+    100142: pasted__pasted__pasted__pasted__pasted__nurbsCircle1
+    100144: pasted__pasted__QuickRigCharacter_Hips
+    100146: pasted__pasted__QuickRigCharacter_LeftArm
+    100148: pasted__pasted__QuickRigCharacter_LeftFoot
+    100150: pasted__pasted__QuickRigCharacter_LeftForeArm
+    100152: pasted__pasted__QuickRigCharacter_LeftHand
+    100154: pasted__pasted__QuickRigCharacter_LeftLeg
+    100156: pasted__pasted__QuickRigCharacter_LeftShoulder
+    100158: pasted__pasted__QuickRigCharacter_LeftToeBase
+    100160: pasted__pasted__QuickRigCharacter_LeftUpLeg
+    100162: pasted__pasted__QuickRigCharacter_RightArm
+    100164: pasted__pasted__QuickRigCharacter_RightFoot
+    100166: pasted__pasted__QuickRigCharacter_RightForeArm
+    100168: pasted__pasted__QuickRigCharacter_RightHand
+    100170: pasted__pasted__QuickRigCharacter_RightLeg
+    100172: pasted__pasted__QuickRigCharacter_RightShoulder
+    100174: pasted__pasted__QuickRigCharacter_RightToeBase
+    100176: pasted__pasted__QuickRigCharacter_RightUpLeg
+    100178: pasted__pasted__QuickRigCharacter_Spine
+    100180: pasted__pasted__QuickRigCharacter_Spine1
+    100182: pasted__pasted__QuickRigCharacter_Spine2
+    400000: Banana
+    400002: //RootNode
+    400004: calcetin005
+    400006: Group006
+    400008: Group007
+    400010: group1
+    400012: Mesh_rdmobj004
+    400014: Object027
+    400016: Object028
+    400018: Object029
+    400020: pasted__group
+    400022: pasted__pasted__Cabesa
+    400024: pasted__pasted__Cabesa_end
+    400026: pasted__pasted__Group005
+    400028: pasted__pasted__ikHandle1
+    400030: pasted__pasted__ikHandle2
+    400032: pasted__pasted__joint1
+    400034: pasted__pasted__joint10
+    400036: pasted__pasted__joint11
+    400038: pasted__pasted__joint11 1
+    400040: pasted__pasted__joint12
+    400042: pasted__pasted__joint12 1
+    400044: pasted__pasted__joint13
+    400046: pasted__pasted__joint13 1
+    400048: pasted__pasted__joint14
+    400050: pasted__pasted__joint15
+    400052: pasted__pasted__joint15 1
+    400054: pasted__pasted__joint16
+    400056: pasted__pasted__joint16 1
+    400058: pasted__pasted__joint17
+    400060: pasted__pasted__joint17 1
+    400062: pasted__pasted__joint19
+    400064: pasted__pasted__joint2
+    400066: pasted__pasted__joint2 1
+    400068: pasted__pasted__joint20
+    400070: pasted__pasted__joint20 1
+    400072: pasted__pasted__joint21
+    400074: pasted__pasted__joint21 1
+    400076: pasted__pasted__joint25
+    400078: pasted__pasted__joint3
+    400080: pasted__pasted__joint3 1
+    400082: pasted__pasted__joint30
+    400084: pasted__pasted__joint35
+    400086: pasted__pasted__joint4
+    400088: pasted__pasted__joint4 1
+    400090: pasted__pasted__joint40
+    400092: pasted__pasted__joint45
+    400094: pasted__pasted__joint46
+    400096: pasted__pasted__joint5
+    400098: pasted__pasted__joint50
+    400100: pasted__pasted__joint51
+    400102: pasted__pasted__joint6
+    400104: pasted__pasted__joint6 1
+    400106: pasted__pasted__joint7
+    400108: pasted__pasted__joint7 1
+    400110: pasted__pasted__joint8
+    400112: pasted__pasted__joint8 1
+    400114: pasted__pasted__nurbsCircle1
+    400116: pasted__pasted__nurbsCircle2
+    400118: pasted__pasted__nurbsCircle3
+    400120: pasted__pasted__nurbsCircle4
+    400122: pasted__pasted__nurbsCircle5
+    400124: pasted__pasted__nurbsCircle6
+    400126: pasted__pasted__pasted__nurbsCircle1
+    400128: pasted__pasted__pasted__nurbsCircle2
+    400130: pasted__pasted__pasted__nurbsCircle3
+    400132: pasted__pasted__pasted__nurbsCircle4
+    400134: pasted__pasted__pasted__nurbsCircle4 1
+    400136: pasted__pasted__pasted__nurbsCircle6
+    400138: pasted__pasted__pasted__pasted__nurbsCircle1
+    400140: pasted__pasted__pasted__pasted__nurbsCircle5
+    400142: pasted__pasted__pasted__pasted__pasted__nurbsCircle1
+    400144: pasted__pasted__QuickRigCharacter_Hips
+    400146: pasted__pasted__QuickRigCharacter_LeftArm
+    400148: pasted__pasted__QuickRigCharacter_LeftFoot
+    400150: pasted__pasted__QuickRigCharacter_LeftForeArm
+    400152: pasted__pasted__QuickRigCharacter_LeftHand
+    400154: pasted__pasted__QuickRigCharacter_LeftLeg
+    400156: pasted__pasted__QuickRigCharacter_LeftShoulder
+    400158: pasted__pasted__QuickRigCharacter_LeftToeBase
+    400160: pasted__pasted__QuickRigCharacter_LeftUpLeg
+    400162: pasted__pasted__QuickRigCharacter_RightArm
+    400164: pasted__pasted__QuickRigCharacter_RightFoot
+    400166: pasted__pasted__QuickRigCharacter_RightForeArm
+    400168: pasted__pasted__QuickRigCharacter_RightHand
+    400170: pasted__pasted__QuickRigCharacter_RightLeg
+    400172: pasted__pasted__QuickRigCharacter_RightShoulder
+    400174: pasted__pasted__QuickRigCharacter_RightToeBase
+    400176: pasted__pasted__QuickRigCharacter_RightUpLeg
+    400178: pasted__pasted__QuickRigCharacter_Spine
+    400180: pasted__pasted__QuickRigCharacter_Spine1
+    400182: pasted__pasted__QuickRigCharacter_Spine2
+    2100000: 08 - Default2
+    2100002: 03 - Default2
+    2100004: 07 - Default1
+    2100006: 02 - Default2
+    2100008: 01 - Default
+    2100010: 09 - Default2
+    2100012: 13 - Default2
+    2100014: 09 - Default3
+    4300000: Object028
+    4300002: Object029
+    4300004: Mesh_rdmobj004
+    4300006: Object027
+    4300008: calcetin005
+    4300010: Banana
+    7400000: swiming
+    9500000: //RootNode
+    13700000: Banana
+    13700002: calcetin005
+    13700004: Mesh_rdmobj004
+    13700006: Object027
+    13700008: Object028
+    13700010: Object029
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: swiming
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
