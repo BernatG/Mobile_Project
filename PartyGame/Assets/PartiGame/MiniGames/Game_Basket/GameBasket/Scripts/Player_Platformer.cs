@@ -9,8 +9,11 @@ using TMPro;
 public class Player_Platformer : MonoBehaviour {
 
 	private Rigidbody rigidBody;
+    public GameObject particleEffect;
+    public GameObject negativeEffect;
 
-	bool movingLeft;
+
+    bool movingLeft;
 	bool movingRight;
     bool movingUp;
     bool movingDown;
@@ -101,6 +104,8 @@ public class Player_Platformer : MonoBehaviour {
             effectSounds.clip = punto;
             effectSounds.Play();
             points += 100;
+            Instantiate(particleEffect, transform);
+
             textPoints.text = points.ToString();
             Destroy(collision.gameObject);
            
@@ -109,7 +114,7 @@ public class Player_Platformer : MonoBehaviour {
         {
             effectSounds.clip = fail;
             effectSounds.Play();
-            if (points >= 100) points -= 100;            
+            if (points >= 100) points -= 100;    
             textPoints.text = points.ToString();
             Destroy(collision.gameObject);
             //particleBomb.Play();

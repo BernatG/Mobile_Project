@@ -7,7 +7,8 @@ public class PlayerController_JumpAndDown : MonoBehaviour
     Clock clock;
     private Rigidbody rb;
     private BoxCollider bc;
-    public Animator animatorPlayer; 
+    public Animator animatorPlayer;
+    public GameObject particleEffect;
     bool cubeIsOnGround;
     public bool kill;    
 
@@ -132,6 +133,7 @@ public class PlayerController_JumpAndDown : MonoBehaviour
     {
         if (other.gameObject.tag == "water")
         {
+            Instantiate(particleEffect, transform);
             Debug.Log("Colision water");
             kill = true;
 
