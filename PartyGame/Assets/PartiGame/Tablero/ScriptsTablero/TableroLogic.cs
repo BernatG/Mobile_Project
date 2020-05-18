@@ -56,10 +56,9 @@ public class TableroLogic : MonoBehaviour {
             player4.SetActive(true);
             players.Add(connectedDevices[3], player4.GetComponent<Player>());
 
-            if (inital)
+            if (!players[connectedDevices[0]].ready)
             {
                 logicStartGame.SetActive(true);
-                inital = false;
             }
         }
 

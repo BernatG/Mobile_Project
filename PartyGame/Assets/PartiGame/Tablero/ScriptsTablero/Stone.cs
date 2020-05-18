@@ -172,11 +172,32 @@ public class Stone : MonoBehaviour
 
         animatorPlayer[roundPlayer].SetBool("run", false);
         isMoving = false;
-        if(roundPlayer == 3)
+
+        if (roundPlayer == 3)
         {
             StartCoroutine(RandomMiniGame());
         }
     }
+
+    //IEnumerator Retroceder(int steps)
+    //{
+    //    while (steps > 0)
+    //    {
+    //        Vector3 nextPos = currentRoute.childNodeList[players[roundPlayer].routePosition - 1].position;
+
+    //        Vector3 targetDirection = currentRoute.childNodeList[players[roundPlayer].routePosition - 1].position - players[roundPlayer].transform.position;
+    //        Quaternion rotation = Quaternion.LookRotation(targetDirection);
+
+
+    //        while (MoveToRotateNode(rotation)) { yield return null; }
+    //        while (MoveToNextNode(nextPos)) { yield return null; }
+
+
+    //        //yield return new WaitForSeconds(0.1f);
+    //        steps--;
+    //        players[roundPlayer].routePosition--;
+    //    }
+    //}
 
     IEnumerator RandomMiniGame()
     {
