@@ -1335,6 +1335,7 @@ MonoBehaviour:
     type: 3}
   kill: 0
   points: 0
+  splash: {x: 90, y: 0, z: 0, w: 0}
 --- !u!65 &174205985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2901,6 +2902,7 @@ MonoBehaviour:
     type: 3}
   kill: 0
   points: 0
+  splash: {x: 90, y: 0, z: 0, w: 0}
 --- !u!1 &304789299
 GameObject:
   m_ObjectHideFlags: 0
@@ -5272,6 +5274,7 @@ MonoBehaviour:
     type: 3}
   kill: 0
   points: 0
+  splash: {x: 90, y: 0, z: 0, w: 0}
 --- !u!4 &479223594
 Transform:
   m_ObjectHideFlags: 0
@@ -22188,6 +22191,7 @@ MonoBehaviour:
     type: 3}
   kill: 0
   points: 0
+  splash: {x: 90, y: 0, z: 0, w: 0}
 --- !u!4 &2119199007
 Transform:
   m_ObjectHideFlags: 0

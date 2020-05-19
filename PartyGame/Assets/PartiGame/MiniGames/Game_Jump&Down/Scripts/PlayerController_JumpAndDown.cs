@@ -22,6 +22,8 @@ public class PlayerController_JumpAndDown : MonoBehaviour
     private Vector3 scalePersonaje;
     private GameObject playerVisual;
 
+    public GameObject splash;
+
     private void Awake()
     {
         scalePersonaje = new Vector3(1f, 1f, 1f);
@@ -133,7 +135,9 @@ public class PlayerController_JumpAndDown : MonoBehaviour
     {
         if (other.gameObject.tag == "water")
         {
-            Instantiate(particleEffect, transform);
+            
+            splash = Instantiate(particleEffect);
+            splash.transform.position = transform.position;
             Debug.Log("Colision water");
             kill = true;
 
