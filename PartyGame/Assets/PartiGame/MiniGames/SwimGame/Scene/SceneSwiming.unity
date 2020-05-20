@@ -671,6 +671,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go: 0
   rankngPlayer: 0
+  splashWater: {fileID: 0}
+  particleEffect: {fileID: 3833728171215590781, guid: 3991e1928d9667b4f81f610edfe5da0f,
+    type: 3}
   animatorPlayer: {fileID: 0}
 --- !u!65 &61142465
 BoxCollider:
@@ -5821,6 +5824,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go: 0
   rankngPlayer: 0
+  splashWater: {fileID: 0}
+  particleEffect: {fileID: 0}
   animatorPlayer: {fileID: 0}
 --- !u!1001 &851652147
 PrefabInstance:
@@ -6143,6 +6148,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go: 0
   rankngPlayer: 0
+  splashWater: {fileID: 0}
+  particleEffect: {fileID: 3833728171215590781, guid: 3991e1928d9667b4f81f610edfe5da0f,
+    type: 3}
   animatorPlayer: {fileID: 0}
 --- !u!65 &869265507
 BoxCollider:
@@ -7591,6 +7599,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go: 0
   rankngPlayer: 0
+  splashWater: {fileID: 0}
+  particleEffect: {fileID: 3833728171215590781, guid: 3991e1928d9667b4f81f610edfe5da0f,
+    type: 3}
   animatorPlayer: {fileID: 0}
 --- !u!65 &1153561715
 BoxCollider:
@@ -12914,6 +12925,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go: 0
   rankngPlayer: 0
+  splashWater: {fileID: 0}
+  particleEffect: {fileID: 3833728171215590781, guid: 3991e1928d9667b4f81f610edfe5da0f,
+    type: 3}
   animatorPlayer: {fileID: 0}
 --- !u!65 &1852419401
 BoxCollider:

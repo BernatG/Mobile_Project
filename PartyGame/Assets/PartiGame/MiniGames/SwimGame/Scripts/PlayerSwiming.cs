@@ -24,6 +24,10 @@ public class PlayerSwiming : MonoBehaviour
 
     private ChangeSkinPlayer skin;
 
+    public GameObject splashWater;
+    public GameObject particleEffect;
+
+
     public Animator animatorPlayer;
 
     private void Awake()
@@ -67,6 +71,12 @@ public class PlayerSwiming : MonoBehaviour
         switch (input)
         {
             case "swiming":
+                if (go)
+                {
+                    splashWater = Instantiate(particleEffect, transform);
+                }
+                //splashWater.transform.position = transform.position;
+                //splashWater.transform.position = new Vector3(transform.position.x, 0, transform.position.y);
                 swiming = true;
                 clicks += 1;
                 break;

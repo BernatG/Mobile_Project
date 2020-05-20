@@ -206,7 +206,7 @@ public class Stone : MonoBehaviour
         waitSecond = false;
 
         //int random = Random.RandomRange(0, 3);
-        int random = 1;
+        int random = 0;
         switch (random)
         {
             case 0:
