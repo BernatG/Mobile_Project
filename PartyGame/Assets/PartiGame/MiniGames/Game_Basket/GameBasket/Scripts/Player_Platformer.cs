@@ -116,6 +116,7 @@ public class Player_Platformer : MonoBehaviour {
             effectSounds.Play();
             if (points >= 100) points -= 100;    
             textPoints.text = points.ToString();
+            Instantiate(negativeEffect, transform);
             Destroy(collision.gameObject);
             //particleBomb.Play();
         }
