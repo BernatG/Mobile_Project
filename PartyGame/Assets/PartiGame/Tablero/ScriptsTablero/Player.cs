@@ -34,7 +34,6 @@ public class Player : MonoBehaviour
 
     public void ButtonInput(string input)
     {
-        Debug.Log("Mensage recivido:" + input);
         switch (input)
         {
             case "start":

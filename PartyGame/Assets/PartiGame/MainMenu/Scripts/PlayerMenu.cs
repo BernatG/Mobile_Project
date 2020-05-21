@@ -24,6 +24,7 @@ public class PlayerMenu : MonoBehaviour
                 playTablero = true;                
                 break;
             case "exit":
+                AirConsole.instance.NavigateHome();
                 exit = true;
                 break;
 

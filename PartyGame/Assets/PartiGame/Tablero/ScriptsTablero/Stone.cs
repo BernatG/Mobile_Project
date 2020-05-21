@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using NDream.AirConsole;
+using TMPro;
 
 public class Stone : MonoBehaviour
 {
@@ -66,7 +67,7 @@ public class Stone : MonoBehaviour
             {
                 roundPlayer++;
                 Debug.Log("Le toca moverse al jugador: " + roundPlayer);
-                if (roundPlayer >= 4) roundPlayer = -1;
+                if (roundPlayer >= 4) roundPlayer = 0;
                
                 mCFollowPlayer.target = players[roundPlayer].transform;
 
@@ -148,7 +149,7 @@ public class Stone : MonoBehaviour
     {
         if(isMoving)
         {
-
+            Debug.Log("hoolllaaaa");
             yield break;
         }
         isMoving = true;
@@ -162,13 +163,80 @@ public class Stone : MonoBehaviour
 
             
             while (MoveToRotateNode(rotation)) { yield return null; }
+            Debug.Log("Moverse");
             while (MoveToNextNode(nextPos)) { yield return null; }
-            
+            Debug.Log("Siguente");
+
 
             //yield return new WaitForSeconds(0.1f);
             steps--;
             players[roundPlayer].routePosition++;
         }
+
+
+        if (players[roundPlayer].routePosition == 4 || players[roundPlayer].routePosition == 10 || players[roundPlayer].routePosition == 17 || players[roundPlayer].routePosition == 19 || players[roundPlayer].routePosition == 25)
+        {
+            yield return new WaitForSeconds(1f);
+
+            steps = 1;
+            while (steps > 0)
+            {
+                Vector3 nextPosRetroceder = currentRoute.childNodeList[players[roundPlayer].routePosition - 1].position;
+                Vector3 targetDirectionRetroceder = currentRoute.childNodeList[players[roundPlayer].routePosition - 1].position - players[roundPlayer].transform.position;
+                Quaternion rotationRetroceder = Quaternion.LookRotation(targetDirectionRetroceder);
+
+
+                //while (MoveToRotateNode(rotationRetroceder)) { yield return null; }
+                while (MoveToNextNode(nextPosRetroceder)) { yield return null; }
+
+
+                steps--;
+                players[roundPlayer].routePosition--;
+            }
+        }
+
+        if(players[roundPlayer].routePosition == 7 || players[roundPlayer].routePosition == 13 || players[roundPlayer].routePosition == 15 || players[roundPlayer].routePosition == 22)
+        {
+            yield return new WaitForSeconds(1f);
+
+            steps = 1;
+            while (steps > 0)
+            {
+                Vector3 nextPos = currentRoute.childNodeList[players[roundPlayer].routePosition + 1].position;
+
+                Vector3 targetDirection = currentRoute.childNodeList[players[roundPlayer].routePosition + 1].position - players[roundPlayer].transform.position;
+                Quaternion rotation = Quaternion.LookRotation(targetDirection);
+
+
+                while (MoveToRotateNode(rotation)) { yield return null; }
+                while (MoveToNextNode(nextPos)) { yield return null; }
+
+
+                steps--;
+                players[roundPlayer].routePosition++;
+            }
+        }
+
+        if (players[roundPlayer].routePosition == 26)
+        {
+            //GameObject canvasWin;
+            //canvasWin = GameObject.Find("Win");
+                
+            //TextMeshProUGUI textWin;
+            //textWin = GameObject.Find("TextWin").GetComponent<TextMeshProUGUI>();
+
+            //canvasWin.SetActive(true);
+            
+            string find = "Player" + (roundPlayer + 1) + "Skin";
+            ChangeSkinPlayer nameWiner = GameObject.Find(find).GetComponent<ChangeSkinPlayer>();
+            Debug.Log("The winer is player: " + nameWiner.nickName);
+            //textWin.SetText("The winer is player: " + nameWiner.nickName);
+
+            yield return new WaitForSeconds(3f);
+
+            AirConsole.instance.NavigateHome();
+        }
+
 
         animatorPlayer[roundPlayer].SetBool("run", false);
         isMoving = false;
@@ -178,26 +246,7 @@ public class Stone : MonoBehaviour
             StartCoroutine(RandomMiniGame());
         }
     }
-
-    //IEnumerator Retroceder(int steps)
-    //{
-    //    while (steps > 0)
-    //    {
-    //        Vector3 nextPos = currentRoute.childNodeList[players[roundPlayer].routePosition - 1].position;
-
-    //        Vector3 targetDirection = currentRoute.childNodeList[players[roundPlayer].routePosition - 1].position - players[roundPlayer].transform.position;
-    //        Quaternion rotation = Quaternion.LookRotation(targetDirection);
-
-
-    //        while (MoveToRotateNode(rotation)) { yield return null; }
-    //        while (MoveToNextNode(nextPos)) { yield return null; }
-
-
-    //        //yield return new WaitForSeconds(0.1f);
-    //        steps--;
-    //        players[roundPlayer].routePosition--;
-    //    }
-    //}
+    
 
     IEnumerator RandomMiniGame()
     {
@@ -242,11 +291,8 @@ public class Stone : MonoBehaviour
     }
 
     bool MoveToNextNode(Vector3 goal)
-    {
-
-        
+    {        
         return goal != (players[roundPlayer].transform.position = Vector3.MoveTowards(players[roundPlayer].transform.position, goal, 10f * Time.deltaTime));       
-
     }
 
 }

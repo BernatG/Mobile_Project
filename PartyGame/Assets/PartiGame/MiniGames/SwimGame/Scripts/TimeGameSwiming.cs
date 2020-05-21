@@ -59,7 +59,7 @@ public class TimeGameSwiming : MonoBehaviour
                     player2.go = true;
                     player3.go = true;
                     player4.go = true;
-                    time = 30;
+                    time = 5;
                     startGameGo.SetActive(false);
                     timerPanel.SetActive(true);
                 }

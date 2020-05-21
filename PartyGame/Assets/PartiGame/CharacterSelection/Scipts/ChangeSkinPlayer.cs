@@ -61,6 +61,10 @@ public class ChangeSkinPlayer : MonoBehaviour
         {
             if (ready) imageReady.color = Color.green;
         }
+        else
+        {
+            ready = false;
+        }
 
         Destroy(personajeVisual);
         personajeVisual = Instantiate(personajes[intPersonaje], transform);

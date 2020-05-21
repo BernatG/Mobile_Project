@@ -958,7 +958,6 @@ namespace NDream.AirConsole {
 		}
 
 		void Start () {
-            Debug.Log("EOOOOOOOOO");	
 			// application has to run in background
 #if UNITY_ANDROID && !UNITY_EDITOR
             Application.runInBackground = false;
