@@ -68,12 +68,14 @@ public class Stone : MonoBehaviour
                 roundPlayer++;
                 if (roundPlayer >= 4) roundPlayer = 0;
                
-                mCFollowPlayer.target = players[roundPlayer].transform;
+                //mCFollowPlayer.target = players[roundPlayer].transform;
 
                 if (roundPlayer == 0)
                 {
                     if (stepsPlayer1 != 0)
                     {
+                        mCFollowPlayer.target = players[roundPlayer].transform;
+
                         if (players[roundPlayer].routePosition + stepsPlayer1 < currentRoute.childNodeList.Count)
                         {
                             animatorPlayer[roundPlayer].SetBool("run", true);
@@ -91,6 +93,8 @@ public class Stone : MonoBehaviour
                 {
                     if (stepsPlayer2 != 0)
                     {
+
+                        mCFollowPlayer.target = players[roundPlayer].transform;
                         if (players[roundPlayer].routePosition + stepsPlayer2 < currentRoute.childNodeList.Count)
                         {
                             animatorPlayer[roundPlayer].SetBool("run", true);
@@ -108,6 +112,8 @@ public class Stone : MonoBehaviour
                 {
                     if (stepsPlayer3 != 0)
                     {
+
+                        mCFollowPlayer.target = players[roundPlayer].transform;
                         if (players[roundPlayer].routePosition + stepsPlayer3 < currentRoute.childNodeList.Count)
                         {
                             animatorPlayer[roundPlayer].SetBool("run", true);
@@ -125,6 +131,8 @@ public class Stone : MonoBehaviour
                 {
                     if (stepsPlayer4 != 0)
                     {
+
+                        mCFollowPlayer.target = players[roundPlayer].transform;
                         if (players[roundPlayer].routePosition + stepsPlayer4 < currentRoute.childNodeList.Count)
                         {
                             animatorPlayer[roundPlayer].SetBool("run", true);
@@ -270,6 +278,7 @@ public class Stone : MonoBehaviour
 
         //int random = Random.Range(0, 3);
         int random = 1;
+
         switch (random)
         {
             case 0:
@@ -286,7 +295,7 @@ public class Stone : MonoBehaviour
                 {
                     AirConsole.instance.Message(deviceID, "jumpAndDown");
                 }
-                SceneManager.LoadScene("SceneJumpAndDown");
+                SceneManager.LoadScene(4);
                 break;
             case 2:
                 List<int> connectedDevicesBasket = AirConsole.instance.GetControllerDeviceIds();

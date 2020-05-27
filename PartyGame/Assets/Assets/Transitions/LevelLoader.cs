@@ -11,9 +11,9 @@ public class LevelLoader : MonoBehaviour
    
     public void OnMovieEnded(int nextNumberScene)
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + nextNumberScene));        
+        StartCoroutine(LoadLevel(nextNumberScene));        
     }
-    
+
     IEnumerator LoadLevel(int LevelIndex)
     {
         transition.SetTrigger("Start");

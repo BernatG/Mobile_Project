@@ -38,9 +38,13 @@ public class RankingGame_JumpAndDown : MonoBehaviour
 
     private Stone stone;
 
+    private LevelLoader levelLoader;
+
     private void Start()
     {
         stone = (Stone)FindObjectOfType(typeof(Stone));
+
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
 
         canvasRanking.SetActive(false);
         player1ok = false;
@@ -239,6 +243,7 @@ public class RankingGame_JumpAndDown : MonoBehaviour
             AirConsole.instance.Message(deviceID, "tablero");
         }
 
-        SceneManager.LoadScene("SceneTablero");
+        levelLoader.OnMovieEnded(2);
+        //SceneManager.LoadScene("SceneTablero");
     }
 }

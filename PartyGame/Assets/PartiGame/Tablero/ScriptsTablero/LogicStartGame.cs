@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using NDream.AirConsole;
+using TMPro;
 
 public class LogicStartGame : MonoBehaviour
 {
@@ -15,6 +16,16 @@ public class LogicStartGame : MonoBehaviour
     public Image imagePlayer2;
     public Image imagePlayer3;
     public Image imagePlayer4;
+
+    public TextMeshProUGUI textNamePlayer1;
+    public TextMeshProUGUI textNamePlayer2;
+    public TextMeshProUGUI textNamePlayer3;
+    public TextMeshProUGUI textNamePlayer4;
+
+    private ChangeSkinPlayer namePlayer1;
+    private ChangeSkinPlayer namePlayer2;
+    private ChangeSkinPlayer namePlayer3;
+    private ChangeSkinPlayer namePlayer4;
 
     public GameObject stone;
 
@@ -32,6 +43,19 @@ public class LogicStartGame : MonoBehaviour
     void Start()
     {
         stone.SetActive(false);
+
+        namePlayer1 = GameObject.Find("Player1Skin").GetComponent<ChangeSkinPlayer>();
+        textNamePlayer1.text = namePlayer1.nickName;
+
+        namePlayer2 = GameObject.Find("Player2Skin").GetComponent<ChangeSkinPlayer>();
+        textNamePlayer2.text = namePlayer2.nickName;
+
+        namePlayer3 = GameObject.Find("Player3Skin").GetComponent<ChangeSkinPlayer>();
+        textNamePlayer3.text = namePlayer3.nickName;
+
+        namePlayer4 = GameObject.Find("Player4Skin").GetComponent<ChangeSkinPlayer>();
+        textNamePlayer4.text = namePlayer4.nickName;
+
     }
 
     // Update is called once per frame

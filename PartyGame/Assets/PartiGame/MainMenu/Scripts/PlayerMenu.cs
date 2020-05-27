@@ -46,7 +46,7 @@ public class PlayerMenu : MonoBehaviour
             {
                 AirConsole.instance.Message(deviceID, "tableroReady");
             }
-            levelLoader.OnMovieEnded(1);
+            levelLoader.OnMovieEnded(2);
         }
 
         if(exit)
