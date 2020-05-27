@@ -66,7 +66,6 @@ public class Stone : MonoBehaviour
             else if (SceneManager.GetActiveScene().name == "SceneTablero" && !waitSecond)
             {
                 roundPlayer++;
-                Debug.Log("Le toca moverse al jugador: " + roundPlayer);
                 if (roundPlayer >= 4) roundPlayer = 0;
                
                 mCFollowPlayer.target = players[roundPlayer].transform;
@@ -82,8 +81,8 @@ public class Stone : MonoBehaviour
 
                         }
                         else
-                        {
-                            Debug.Log("Rolled Number is to high");
+                        {                            
+                            StartCoroutine(Wait());
                         }
                         stepsPlayer1 = 0;
                     }
@@ -163,9 +162,7 @@ public class Stone : MonoBehaviour
 
             
             while (MoveToRotateNode(rotation)) { yield return null; }
-            Debug.Log("Moverse");
             while (MoveToNextNode(nextPos)) { yield return null; }
-            Debug.Log("Siguente");
 
 
             //yield return new WaitForSeconds(0.1f);
@@ -185,10 +182,12 @@ public class Stone : MonoBehaviour
                 Vector3 targetDirectionRetroceder = currentRoute.childNodeList[players[roundPlayer].routePosition - 1].position - players[roundPlayer].transform.position;
                 Quaternion rotationRetroceder = Quaternion.LookRotation(targetDirectionRetroceder);
 
-
-                //while (MoveToRotateNode(rotationRetroceder)) { yield return null; }
+                //while (MoveToRotateNode(rotationRetroceder)) { yield return null; } 
+                players[roundPlayer].transform.LookAt(nextPosRetroceder);
                 while (MoveToNextNode(nextPosRetroceder)) { yield return null; }
 
+                nextPosRetroceder = currentRoute.childNodeList[players[roundPlayer].routePosition + 1].position;
+                players[roundPlayer].transform.LookAt(nextPosRetroceder);
 
                 steps--;
                 players[roundPlayer].routePosition--;
@@ -217,7 +216,7 @@ public class Stone : MonoBehaviour
             }
         }
 
-        if (players[roundPlayer].routePosition == 26)
+        if (players[roundPlayer].routePosition == 26)       
         {
             //GameObject canvasWin;
             //canvasWin = GameObject.Find("Win");
@@ -227,18 +226,29 @@ public class Stone : MonoBehaviour
 
             //canvasWin.SetActive(true);
             
-            string find = "Player" + (roundPlayer + 1) + "Skin";
-            ChangeSkinPlayer nameWiner = GameObject.Find(find).GetComponent<ChangeSkinPlayer>();
-            Debug.Log("The winer is player: " + nameWiner.nickName);
+            //string find = "Player" + (roundPlayer + 1) + "Skin";
+            //ChangeSkinPlayer nameWiner = GameObject.Find(find).GetComponent<ChangeSkinPlayer>();
+            //Debug.Log("The winer is player: " + nameWiner.nickName);
             //textWin.SetText("The winer is player: " + nameWiner.nickName);
 
-            yield return new WaitForSeconds(3f);
+            //yield return new WaitForSeconds(3f);
 
-            AirConsole.instance.NavigateHome();
+            foreach(GameObject go in GameObject.FindGameObjectsWithTag("dontdestroy"))
+            {
+                Destroy(go);
+            }
+
+            List<int> connectedDevicesJumpAndDown = AirConsole.instance.GetControllerDeviceIds();
+            foreach (int deviceID in connectedDevicesJumpAndDown)
+            {
+                AirConsole.instance.Message(deviceID, "changeSkin");
+            }
+
+            SceneManager.LoadScene(0);
         }
 
-
         animatorPlayer[roundPlayer].SetBool("run", false);
+        yield return new WaitForSeconds(1f);
         isMoving = false;
 
         if (roundPlayer == 3)
@@ -247,6 +257,10 @@ public class Stone : MonoBehaviour
         }
     }
     
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1f);
+    }
 
     IEnumerator RandomMiniGame()
     {
@@ -254,7 +268,7 @@ public class Stone : MonoBehaviour
         yield return new WaitForSeconds(1);
         waitSecond = false;
 
-        //int random = Random.RandomRange(0, 3);
+        //int random = Random.Range(0, 3);
         int random = 1;
         switch (random)
         {
@@ -287,7 +301,7 @@ public class Stone : MonoBehaviour
 
     bool MoveToRotateNode(Quaternion rota)
     {
-        return rota != (players[roundPlayer].transform.rotation = Quaternion.Lerp(players[roundPlayer].transform.rotation, rota, 10f * Time.deltaTime));
+        return rota != (players[roundPlayer].transform.rotation = Quaternion.Lerp(players[roundPlayer].transform.rotation, rota, 30f * Time.deltaTime));
     }
 
     bool MoveToNextNode(Vector3 goal)

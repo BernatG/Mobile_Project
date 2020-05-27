@@ -15885,7 +15885,7 @@ GameObject:
   - component: {fileID: 728968295}
   m_Layer: 0
   m_Name: GameLogic
-  m_TagString: Untagged
+  m_TagString: dontdestroy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18942,7 +18942,7 @@ GameObject:
   - component: {fileID: 881715825}
   m_Layer: 0
   m_Name: Players
-  m_TagString: Untagged
+  m_TagString: dontdestroy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

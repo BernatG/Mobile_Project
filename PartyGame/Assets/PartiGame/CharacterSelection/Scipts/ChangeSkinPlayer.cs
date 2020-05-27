@@ -35,13 +35,12 @@ public class ChangeSkinPlayer : MonoBehaviour
     {
         if (!ready)
         {
-            Debug.Log("Mensage recivido:" + input);
             switch (input)
             {
-                case "up":
+                case "change-up":
                     intPersonaje++;
                     break;
-                case "down":
+                case "change-down":
                     intPersonaje--;
                     break;
                 case "ready":
@@ -54,23 +53,30 @@ public class ChangeSkinPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (personajes.Count <= intPersonaje) intPersonaje = 0;
-        if (-1 >= intPersonaje) intPersonaje = personajes.Count - 1;
-
-        if (SceneManager.GetActiveScene().buildIndex == 0)
+        if (!ready)
         {
-            if (ready) imageReady.color = Color.green;
-        }
-        else
-        {
-            ready = false;
+            if (personajes.Count <= intPersonaje) intPersonaje = 0;
+            if (-1 >= intPersonaje) intPersonaje = personajes.Count - 1;
+
+
+
+            Destroy(personajeVisual);
+            personajeVisual = Instantiate(personajes[intPersonaje], transform);
+
+            personajeVisual.transform.localScale = scaleChange;
+
         }
 
-        Destroy(personajeVisual);
-        personajeVisual = Instantiate(personajes[intPersonaje], transform);
-
-        personajeVisual.transform.localScale = scaleChange;        
+            if (SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                if (ready) imageReady.color = Color.green;
+            }
+            else
+            {
+                ready = false;
+            }
     }
+    
 
     // Update is called once per frame
     //void Update()

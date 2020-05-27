@@ -52,6 +52,31 @@ public class ChangeSkinLogic : MonoBehaviour {
         AirConsole.instance.onMessage += OnMessage;		
 		AirConsole.instance.onReady += OnReady;		
 		AirConsole.instance.onConnect += OnConnect;
+
+        List<int> connectedDevices = AirConsole.instance.GetControllerDeviceIds();
+        if (connectedDevices != null)
+        {
+            player1.SetActive(true);
+            canvasPlayer1.SetActive(true);
+            players.Add(connectedDevices[0], player1.GetComponent<ChangeSkinPlayer>());
+            NickName(connectedDevices[0], textNamePlayer1);
+
+            player2.SetActive(true);
+            canvasPlayer2.SetActive(true);
+            players.Add(connectedDevices[1], player2.GetComponent<ChangeSkinPlayer>());
+            NickName(connectedDevices[1], textNamePlayer2);
+
+            player3.SetActive(true);
+            canvasPlayer3.SetActive(true);
+            players.Add(connectedDevices[2], player3.GetComponent<ChangeSkinPlayer>());
+            NickName(connectedDevices[2], textNamePlayer3);
+
+            player4.SetActive(true);
+            canvasPlayer4.SetActive(true);
+            players.Add(connectedDevices[3], player4.GetComponent<ChangeSkinPlayer>());
+            NickName(connectedDevices[3], textNamePlayer4);
+
+        }
     }
 
 	void OnReady(string code){

@@ -12,8 +12,6 @@ public class TableroLogic : MonoBehaviour {
 	private GameObject player4;
     public GameObject logicStartGame;
 
-    bool inital = true;
-
     bool start = true;
 
 
