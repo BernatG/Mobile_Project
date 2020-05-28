@@ -11,6 +11,8 @@ public class Meta : MonoBehaviour
 
     public int ranking = 1;
 
+    public AudioSource splashMusic;
+
     public GameObject canvasRankingGame;
     public GameObject timeGame;
 
@@ -35,6 +37,7 @@ public class Meta : MonoBehaviour
                 player1.rankngPlayer = ranking;
                 player1.go = false;
                 Debug.Log("Posicion 1: " + player1.rankngPlayer);
+                splashMusic.Play();
                 ranking++;
             }
         }
@@ -45,6 +48,7 @@ public class Meta : MonoBehaviour
                 player2.rankngPlayer = ranking;
                 player2.go = false;
                 Debug.Log("Posicion 2: " + player2.rankngPlayer);
+                splashMusic.Play();
                 ranking++;
             }
         }
@@ -55,6 +59,7 @@ public class Meta : MonoBehaviour
                 player3.rankngPlayer = ranking;
                 player3.go = false;
                 Debug.Log("Posicion 3: " + player3.rankngPlayer);
+                splashMusic.Play();
                 ranking++;
             }
         }
@@ -65,6 +70,7 @@ public class Meta : MonoBehaviour
                 player4.rankngPlayer = ranking;
                 player4.go = false;
                 Debug.Log("Posicion 4: " + player4.rankngPlayer);
+                splashMusic.Play();
                 ranking++;
             }
         }

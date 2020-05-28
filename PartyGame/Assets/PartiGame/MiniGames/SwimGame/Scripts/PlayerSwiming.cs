@@ -75,7 +75,7 @@ public class PlayerSwiming : MonoBehaviour
             case "swiming":
                 if (go)
                 {
-                    splashWater = Instantiate(particleEffect, transform);
+                    splashWater = Instantiate(particleEffect, transform);                    
                 }
                 //splashWater.transform.position = transform.position;
                 //splashWater.transform.position = new Vector3(transform.position.x, 0, transform.position.y);
