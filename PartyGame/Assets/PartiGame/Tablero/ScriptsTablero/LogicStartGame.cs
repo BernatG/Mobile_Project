@@ -28,26 +28,10 @@ public class LogicStartGame : MonoBehaviour
     private ChangeSkinPlayer namePlayer4;
 
     public GameObject stone;
-    Stone scStone;
-
-    //void Awake()
-    //{
-
-    //    DontDestroyOnLoad(this.gameObject);
-
-    //    if (FindObjectsOfType(GetType()).Length > 1)
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
-    // Start is called before the first frame update
 
     void Start()
     {
         stone.SetActive(false);
-        scStone = GameObject.Find("Stone").GetComponent<Stone>();
-
-        if (scStone.minijuego < 0) Destroy(gameObject);
 
         namePlayer1 = GameObject.Find("Player1Skin").GetComponent<ChangeSkinPlayer>();
         textNamePlayer1.text = namePlayer1.nickName;
