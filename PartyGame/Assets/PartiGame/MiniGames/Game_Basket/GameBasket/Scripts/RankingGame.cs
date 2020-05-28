@@ -34,11 +34,14 @@ public class RankingGame : MonoBehaviour
 
     private Stone stone;
 
+    private LevelLoader levelLoader;
 
     // Start is called before the first frame update
     void Start()
     {
         stone = (Stone)FindObjectOfType(typeof(Stone));
+
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
 
         players.Add(player1);
         players.Add(player2);
@@ -198,7 +201,7 @@ public class RankingGame : MonoBehaviour
             AirConsole.instance.Message(deviceID, "tablero");
         }
 
-        SceneManager.LoadScene("SceneTablero");
+        levelLoader.OnMovieEnded(2);
     }
 
 }

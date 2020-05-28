@@ -11,8 +11,6 @@ public class PlatformerExampleLogic_JumpAndDown : MonoBehaviour {
 	public GameObject player3;
 	public GameObject player4;
 
-    public GameObject timeGame;
-
 	public Dictionary<int, PlayerController_JumpAndDown> players = new Dictionary<int, PlayerController_JumpAndDown> ();
     int idPlayer = 0;
 
@@ -21,7 +19,6 @@ public class PlatformerExampleLogic_JumpAndDown : MonoBehaviour {
         player2.SetActive(false);
         player3.SetActive(false);
         player4.SetActive(false);
-        timeGame.SetActive(false);
 		AirConsole.instance.onMessage += OnMessage;		
 		AirConsole.instance.onReady += OnReady;		
 		AirConsole.instance.onConnect += OnConnect;
@@ -39,7 +36,6 @@ public class PlatformerExampleLogic_JumpAndDown : MonoBehaviour {
 
         player4.SetActive(true);
         players.Add(connectedDevices[3], player4.GetComponent<PlayerController_JumpAndDown>());
-        timeGame.SetActive(true);
                 
     }
 
@@ -90,7 +86,6 @@ public class PlatformerExampleLogic_JumpAndDown : MonoBehaviour {
         {
             player4.SetActive(true);
             players.Add(deviceID, player4.GetComponent<PlayerController_JumpAndDown>());
-            timeGame.SetActive(true);
         }
 
     }

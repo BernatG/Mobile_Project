@@ -156,6 +156,7 @@
           console.log("onMessage", from, data);
 		  if (data === "tableroReady")
 		  {
+			me.airconsole = new AirConsole({"orientation": "portrait", "synchronize_time" : "true"});
 			mainMenu.style.display = "none";
 			changeSkin.style.display = "none";
 			tablero.style.display = "none";

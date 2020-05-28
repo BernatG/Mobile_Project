@@ -27,6 +27,8 @@ public class Stone : MonoBehaviour
 
     private bool waitSecond = false;
 
+    int minijuego = 0;    
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -78,13 +80,14 @@ public class Stone : MonoBehaviour
 
                         if (players[roundPlayer].routePosition + stepsPlayer1 < currentRoute.childNodeList.Count)
                         {
+                            
                             animatorPlayer[roundPlayer].SetBool("run", true);
                             StartCoroutine(Move(stepsPlayer1));
 
                         }
                         else
-                        {                            
-                            StartCoroutine(Wait());
+                        {
+                            StartCoroutine(Move(0));
                         }
                         stepsPlayer1 = 0;
                     }
@@ -103,7 +106,7 @@ public class Stone : MonoBehaviour
                         }
                         else
                         {
-                            Debug.Log("Rolled Number is to high");
+                            StartCoroutine(Move(0));
                         }
                         stepsPlayer2 = 0;
                     }
@@ -122,7 +125,7 @@ public class Stone : MonoBehaviour
                         }
                         else
                         {
-                            Debug.Log("Rolled Number is to high");
+                            StartCoroutine(Move(0));
                         }
                         stepsPlayer3 = 0;
                     }
@@ -141,7 +144,7 @@ public class Stone : MonoBehaviour
                         }
                         else
                         {
-                            Debug.Log("Rolled Number is to high");
+                            StartCoroutine(Move(0));
                         }
                         stepsPlayer4 = 0;                        
                     }
@@ -181,7 +184,7 @@ public class Stone : MonoBehaviour
 
         if (players[roundPlayer].routePosition == 4 || players[roundPlayer].routePosition == 10 || players[roundPlayer].routePosition == 17 || players[roundPlayer].routePosition == 19 || players[roundPlayer].routePosition == 25)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.5f);
 
             steps = 1;
             while (steps > 0)
@@ -204,7 +207,7 @@ public class Stone : MonoBehaviour
 
         if(players[roundPlayer].routePosition == 7 || players[roundPlayer].routePosition == 13 || players[roundPlayer].routePosition == 15 || players[roundPlayer].routePosition == 22)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.5f);
 
             steps = 1;
             while (steps > 0)
@@ -256,7 +259,7 @@ public class Stone : MonoBehaviour
         }
 
         animatorPlayer[roundPlayer].SetBool("run", false);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         isMoving = false;
 
         if (roundPlayer == 3)
@@ -267,7 +270,7 @@ public class Stone : MonoBehaviour
     
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
     }
 
     IEnumerator RandomMiniGame()
@@ -277,15 +280,17 @@ public class Stone : MonoBehaviour
         waitSecond = false;
 
         //int random = Random.Range(0, 3);
-        int random = 1;
+        //int random = 1;
 
-        switch (random)
+        if (minijuego >= 3) minijuego = 0;
+
+        switch (minijuego)
         {
             case 0:
                 List<int> connectedDevicesSwiming = AirConsole.instance.GetControllerDeviceIds();
                 foreach (int deviceID in connectedDevicesSwiming)
                 {
-                    AirConsole.instance.Message(deviceID, "swiming");
+                    AirConsole.instance.Message(deviceID, "tableroReady");
                 }
                 SceneManager.LoadScene("SceneSwiming");
                 break;
@@ -293,19 +298,22 @@ public class Stone : MonoBehaviour
                 List<int> connectedDevicesJumpAndDown = AirConsole.instance.GetControllerDeviceIds();
                 foreach (int deviceID in connectedDevicesJumpAndDown)
                 {
-                    AirConsole.instance.Message(deviceID, "jumpAndDown");
+                    AirConsole.instance.Message(deviceID, "tableroReady");
                 }
-                SceneManager.LoadScene(4);
+                LevelLoader levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
+                levelLoader.OnMovieEnded(4);
                 break;
             case 2:
                 List<int> connectedDevicesBasket = AirConsole.instance.GetControllerDeviceIds();
                 foreach (int deviceID in connectedDevicesBasket)
                 {
-                    AirConsole.instance.Message(deviceID, "gameBasket");
+                    AirConsole.instance.Message(deviceID, "tableroReady");
                 }
                 SceneManager.LoadScene("SceneBasket");
                 break;
         }
+
+        minijuego++;
     }
 
     bool MoveToRotateNode(Quaternion rota)

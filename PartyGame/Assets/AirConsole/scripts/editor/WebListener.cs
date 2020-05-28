@@ -108,7 +108,6 @@ namespace NDream.AirConsole.Editor {
 				if (Settings.debug.error) {
 
 					if (e.Message != "Write failure") {
-						Debug.LogError (e.Message);
 					}
 				}
 			}

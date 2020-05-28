@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController_JumpAndDown : MonoBehaviour
 {
     Clock clock;
+    public bool ready = false;
     private Rigidbody rb;
     private BoxCollider bc;
     public Animator animatorPlayer;
@@ -77,6 +78,9 @@ public class PlayerController_JumpAndDown : MonoBehaviour
                 break;
             case "down-up":
                 movingDown = false;
+                break;
+            case "start":
+                ready = true;
                 break;
         }
     }

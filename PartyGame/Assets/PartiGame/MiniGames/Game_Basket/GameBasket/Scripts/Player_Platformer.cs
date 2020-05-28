@@ -12,6 +12,7 @@ public class Player_Platformer : MonoBehaviour {
     public GameObject particleEffect;
     public GameObject negativeEffect;
 
+    public bool ready = false;
 
     bool movingLeft;
 	bool movingRight;
@@ -68,6 +69,10 @@ public class Player_Platformer : MonoBehaviour {
 
             case "jump":
                 rigidBody.AddForce(transform.up * jumpForce);
+                break;
+
+            case "start":
+                ready = true;
                 break;
         }
 	}

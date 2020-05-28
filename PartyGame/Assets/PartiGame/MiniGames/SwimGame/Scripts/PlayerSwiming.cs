@@ -7,6 +7,8 @@ public class PlayerSwiming : MonoBehaviour
 {
     int contador;
 
+    public bool ready;
+
     Clock clock;
 
     private float thrust = 0.0f;
@@ -84,6 +86,10 @@ public class PlayerSwiming : MonoBehaviour
             case "swiming-up":
                 swiming = false;
                 okPresButton = true;
+                break;
+
+            case "start":
+                ready = true;
                 break;
         }
     }

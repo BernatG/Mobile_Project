@@ -28,12 +28,14 @@ public class RankingGameSwiming : MonoBehaviour
 
     public Meta meta;
 
+    private LevelLoader levelLoader;
 
     // Start is called before the first frame update
     void Start()
     {
         stone = (Stone)FindObjectOfType(typeof(Stone));
 
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
 
         switch (player1.rankngPlayer)
         {
@@ -228,6 +230,6 @@ public class RankingGameSwiming : MonoBehaviour
             AirConsole.instance.Message(deviceID, "tablero");
         }
 
-        SceneManager.LoadScene("SceneTablero");
+        levelLoader.OnMovieEnded(2);
     }
 }
