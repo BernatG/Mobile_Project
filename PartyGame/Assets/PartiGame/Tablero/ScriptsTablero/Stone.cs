@@ -27,7 +27,9 @@ public class Stone : MonoBehaviour
 
     private bool waitSecond = false;
 
-    int minijuego = 0;    
+    public int minijuego = 0;
+
+    LevelLoader levelLoader;
 
     private void Awake()
     {
@@ -182,7 +184,7 @@ public class Stone : MonoBehaviour
         }
 
 
-        if (players[roundPlayer].routePosition == 4 || players[roundPlayer].routePosition == 10 || players[roundPlayer].routePosition == 17 || players[roundPlayer].routePosition == 19 || players[roundPlayer].routePosition == 25)
+        if (players[roundPlayer].routePosition == 3|| players[roundPlayer].routePosition == 5 || players[roundPlayer].routePosition == 11)
         {
             yield return new WaitForSeconds(1.5f);
 
@@ -205,7 +207,7 @@ public class Stone : MonoBehaviour
             }
         }
 
-        if(players[roundPlayer].routePosition == 7 || players[roundPlayer].routePosition == 13 || players[roundPlayer].routePosition == 15 || players[roundPlayer].routePosition == 22)
+        if(players[roundPlayer].routePosition == 1 || players[roundPlayer].routePosition == 8)
         {
             yield return new WaitForSeconds(1.5f);
 
@@ -227,24 +229,21 @@ public class Stone : MonoBehaviour
             }
         }
 
-        if (players[roundPlayer].routePosition == 26)       
+        if (players[roundPlayer].routePosition == 12)       
         {
-            //GameObject canvasWin;
-            //canvasWin = GameObject.Find("Win");
-                
-            //TextMeshProUGUI textWin;
-            //textWin = GameObject.Find("TextWin").GetComponent<TextMeshProUGUI>();
+            Vector3 nextPosRetroceder = currentRoute.childNodeList[players[roundPlayer].routePosition - 1].position;
 
-            //canvasWin.SetActive(true);
-            
-            //string find = "Player" + (roundPlayer + 1) + "Skin";
-            //ChangeSkinPlayer nameWiner = GameObject.Find(find).GetComponent<ChangeSkinPlayer>();
-            //Debug.Log("The winer is player: " + nameWiner.nickName);
-            //textWin.SetText("The winer is player: " + nameWiner.nickName);
+            players[roundPlayer].transform.LookAt(nextPosRetroceder);
 
-            //yield return new WaitForSeconds(3f);
+            TextMeshProUGUI textWiner = GameObject.Find("TextWin").GetComponent<TextMeshProUGUI>();
 
-            foreach(GameObject go in GameObject.FindGameObjectsWithTag("dontdestroy"))
+            string playerWin = "Player" + (roundPlayer + 1) + "Skin";
+            ChangeSkinPlayer namePlayer = GameObject.Find(playerWin).GetComponent<ChangeSkinPlayer>();
+            textWiner.text = "The Winer is " + namePlayer.nickName;
+
+            yield return new WaitForSeconds(5f);
+
+            foreach (GameObject go in GameObject.FindGameObjectsWithTag("dontdestroy"))
             {
                 Destroy(go);
             }
@@ -281,7 +280,7 @@ public class Stone : MonoBehaviour
 
         //int random = Random.Range(0, 3);
         //int random = 1;
-
+        levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
         if (minijuego >= 3) minijuego = 0;
 
         switch (minijuego)
@@ -292,7 +291,7 @@ public class Stone : MonoBehaviour
                 {
                     AirConsole.instance.Message(deviceID, "tableroReady");
                 }
-                SceneManager.LoadScene("SceneSwiming");
+                SceneManager.LoadScene(3);
                 break;
             case 1:
                 List<int> connectedDevicesJumpAndDown = AirConsole.instance.GetControllerDeviceIds();
@@ -300,8 +299,7 @@ public class Stone : MonoBehaviour
                 {
                     AirConsole.instance.Message(deviceID, "tableroReady");
                 }
-                LevelLoader levelLoader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
-                levelLoader.OnMovieEnded(4);
+                SceneManager.LoadScene(4);
                 break;
             case 2:
                 List<int> connectedDevicesBasket = AirConsole.instance.GetControllerDeviceIds();
@@ -309,7 +307,7 @@ public class Stone : MonoBehaviour
                 {
                     AirConsole.instance.Message(deviceID, "tableroReady");
                 }
-                SceneManager.LoadScene("SceneBasket");
+                SceneManager.LoadScene(5);
                 break;
         }
 

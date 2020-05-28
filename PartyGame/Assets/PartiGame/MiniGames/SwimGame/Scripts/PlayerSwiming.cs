@@ -104,7 +104,6 @@ public class PlayerSwiming : MonoBehaviour
                 {
                     contador++;
                     thrust += 0.007f;
-                    Debug.Log(thrust);
                     okPresButton = false;
                 }
                 else

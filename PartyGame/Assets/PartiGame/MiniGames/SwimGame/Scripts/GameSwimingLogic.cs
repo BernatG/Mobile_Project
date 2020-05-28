@@ -104,7 +104,6 @@ public class GameSwimingLogic : MonoBehaviour
 
     void OnMessage(int from, JToken data)
     {
-        Debug.Log("message: " + data);
 
         //When I get a message, I check if it's from any of the devices stored in my device Id dictionary
         if (players.ContainsKey(from) && data["action"] != null)

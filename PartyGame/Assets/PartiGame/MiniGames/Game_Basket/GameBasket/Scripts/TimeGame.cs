@@ -67,7 +67,7 @@ public class TimeGame : MonoBehaviour
         else
         {            
             
-            if (minutos == 1)
+            if (segundos == 30)
             {               
                 initalGame.SetActive(false);
                 CanvasRankingGame.SetActive(true);
